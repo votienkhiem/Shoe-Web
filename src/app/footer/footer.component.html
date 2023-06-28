@@ -1,18 +1,82 @@
 <div class="container">
   <div class="footer footer-top">
-    <span>Sign up to receive information from us</span>
-    <input type="email" />
-    <button>Sign</button>
+    <span class="ft-span">Sign up to receive information from us </span>
+    <input
+      type="email"
+      style="width: 300px; height: 25px"
+      placeholder="enter your email"
+    />
+    <button class="ft-button">Sign</button>
   </div>
   <div class="footer footer-mid">
     <div class="social">
-      <div class="social">Facebook</div>
-      <div class="social">Twitter</div>
-      <div class="social">Instagram</div>
-      <div class="social">Youtube</div>
+      <div class="social-icon">
+        <fa-icon [icon]="faFacebook"></fa-icon>
+        Facebook
+      </div>
+      <div class="social-icon">
+        <fa-icon [icon]="faTwitter"></fa-icon>
+        Twitter
+      </div>
+      <div class="social-icon">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+        Instagram
+      </div>
+      <div class="social-icon">
+        <fa-icon [icon]="faYoutube"></fa-icon>
+        Youtube
+      </div>
+    </div>
+  </div>
+  <div class="footer footer-bottom">
+    <div class="category">
+      <span class="category-span">Category</span>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Custom</li>
+      </ul>
+    </div>
+    <div class="instruct">
+      <span class="category-span">Instruct</span>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Custom</li>
+      </ul>
+    </div>
+    <div class="policy">
+      <span class="category-span">Policy</span>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Custom</li>
+      </ul>
+    </div>
+    <div class="support">
+      <span class="category-span">Support</span>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Custom</li>
+      </ul>
+    </div>
+    <div class="contact">
+      <span class="category-span">Contact Info</span>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Custom</li>
+      </ul>
     </div>
   </div>
   <div class="copyright">
-    <span>Copyright by KHIEM</span>
+    <fa-icon [icon]="faCopyright"></fa-icon>
+    <span> 2023, The Vox</span>
   </div>
 </div>

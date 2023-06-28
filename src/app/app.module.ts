@@ -5,12 +5,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found.component';
+import { HomeComponent } from './Main/page/home/home.component';
+import { ProductComponent } from './Main/page/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent,
+    HomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

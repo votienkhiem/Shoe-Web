@@ -17,7 +17,7 @@ export class ProductDetailsComponent {
     private shoeService: ShoeingService,
   ) {
     // First get the product id from the current route
-    const routeParams = parseInt(this.route.snapshot.params['id'], 10);
+    const routeParams = parseInt(this.route.snapshot.params['shoeId'], 10);
     this.shoeService.getShoeById(routeParams).then(arrShoes => {
       this.shoes = arrShoes
     })

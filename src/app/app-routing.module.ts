@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
-  { path: 'products/:productId', component: ProductDetailsComponent },
+  { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

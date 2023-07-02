@@ -13,8 +13,8 @@ export class ShoeingService {
     const data = await fetch(this.url);
     return await data.json() ?? {};
   }
-  async getShoeById(id: number): Promise<Shoe | undefined> {
-    const data = await fetch(`${this.url}/${id}`);
+  async getShoeById(shoeId: number): Promise<Shoe | undefined> {
+    const data = await fetch(`${this.url}/${shoeId}`);
     return await data.json() ?? {};
   }
 }

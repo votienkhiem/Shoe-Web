@@ -1,1 +1,13 @@
-<p>product works!</p>
+<div class="container-list-shoe">
+  <div *ngFor="let shoe of shoes" class="product-shoe">
+    <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+    <h3>
+      <a
+        [title]="shoe.name + ' details'"
+        [routerLink]="['/products', shoe.id]"
+        >{{ shoe.name }}</a
+      >
+    </h3>
+    <p *ngIf="shoe.description">Description: {{ shoe.description }}</p>
+  </div>
+</div>

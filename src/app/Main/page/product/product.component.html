@@ -24,8 +24,11 @@
           *ngFor="let shoe of shoes"
         >
           <div class="container-list-shoe">
-            <div>
+            <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+              <button type="submit" class="btn-submit-cart">ADD TO CART</button>
+            </div>
+            <div class="shoe-name">
               <h3>
                 <a
                   [title]="shoe.name + ' details'"
@@ -33,10 +36,13 @@
                   >{{ shoe.name }}</a
                 >
               </h3>
-              <p *ngIf="shoe.description">
-                Description: {{ shoe.description }}
-              </p>
             </div>
+            <div>
+              <h5>{{ shoe.price | number : "1.0-2" }}$</h5>
+            </div>
+            <!-- <p *ngIf="shoe.description">
+                Description: {{ shoe.description }}
+              </p> -->
           </div>
         </div>
       </div>

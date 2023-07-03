@@ -1,4 +1,5 @@
 <p>product-details works!</p>
 <div *ngIf="shoes">
   <img src="{{ shoes.image }}" alt="" />
+  <button type="submit" (click)="addToCart(shoes)">add to cart</button>
 </div>

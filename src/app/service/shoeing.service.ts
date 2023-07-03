@@ -7,7 +7,7 @@ import { Shoe } from 'src/shoe';
 export class ShoeingService {
   public url = 'http://localhost:3000/shoes';
 
-  public shoeList: Shoe[] = [];
+  // public shoeList: Shoe[] = [];
   constructor() { }
   async getAllShoes(): Promise<Shoe[]> {
     const data = await fetch(this.url);

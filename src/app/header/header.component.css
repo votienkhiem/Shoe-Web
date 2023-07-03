@@ -43,3 +43,12 @@ div {
   text-decoration: none;
   color: black;
 }
+
+.icon {
+  cursor: pointer;
+
+}
+
+.icon:hover {
+  color: #FF3066;
+}

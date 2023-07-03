@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found
 import { HomeComponent } from './Main/page/home/home.component';
 import { ProductComponent } from './Main/page/product/product.component';
 import { ProductDetailsComponent } from './Main/page/product-details/product-details.component';
+import { CartComponent } from './Main/page/cart/cart.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },

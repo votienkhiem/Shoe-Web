@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartService } from 'src/app/service/cart.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
 
@@ -10,10 +11,16 @@ import { Shoe } from 'src/shoe';
 export class ProductComponent {
   shoes: Shoe[] = [];
 
-  constructor(private shoeService: ShoeingService) {
+  constructor(
+    private shoeService: ShoeingService,
+    private cart: CartService,
+  ) {
     this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
       this.shoes = arrShoes
     });
+  }
+  addToCart(shoe: Shoe) {
+    this.cart.addToCart(shoe);
   }
 
 

@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found
 import { HomeComponent } from './Main/page/home/home.component';
 import { ProductComponent } from './Main/page/product/product.component';
 import { ProductDetailsComponent } from './Main/page/product-details/product-details.component';
+import { CartComponent } from './Main/page/cart/cart.component';
+import { CarouselComponent } from './Main/page/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ProductDetailsComponent } from './Main/page/product-details/product-det
     PageNotFoundComponent,
     HomeComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,13 @@
           <div class="container-list-shoe">
             <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
-              <button type="submit" class="btn-submit-cart">ADD TO CART</button>
+              <button
+                type="submit"
+                class="btn-submit-cart"
+                (click)="addToCart(shoe)"
+              >
+                ADD TO CART
+              </button>
             </div>
             <div class="shoe-name">
               <h3>
@@ -38,7 +44,7 @@
               </h3>
             </div>
             <div>
-              <h5>{{ shoe.price | number : "1.0-2" }}$</h5>
+              <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
             </div>
             <!-- <p *ngIf="shoe.description">
                 Description: {{ shoe.description }}

@@ -44,11 +44,43 @@
         </div>
       </div>
     </div>
-    <div class="link">
+    <div class="link product-men">
       <a>Men</a>
+      <div class="product-list-men">
+        <div class="icon-angle">
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+        <div class="li-sneaker">
+          <a href="">Sneaker</a>
+          <div class="li-sneaker-list">
+            <ul>
+              <li class="nike">Nike</li>
+              <li class="adidas">Adidas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="li-sandal"><a href="">Sandal</a></div>
+        <div class="li-boot"><a href="">Boot</a></div>
+      </div>
     </div>
-    <div class="link">
+    <div class="link product-women">
       <a>Women</a>
+      <div class="product-list-women">
+        <div class="icon-angle-women">
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+        <div class="li-sneaker">
+          <a href="">Sneaker</a>
+          <div class="li-sneaker-list">
+            <ul>
+              <li class="nike">Nike</li>
+              <li class="adidas">Adidas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="li-sandal"><a href="">Sandal</a></div>
+        <div class="li-boot"><a href="">Boot</a></div>
+      </div>
     </div>
     <div class="link">
       <a>Big Sale</a>
@@ -63,6 +95,10 @@
   <div class="header-right">
     <div class="icon search">
       <fa-icon [icon]="faSearch" title="Search"></fa-icon>
+      <div class="input-search">
+        <input type="text" class="input" placeholder="Search" />
+        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+      </div>
     </div>
     <div class="icon user">
       <fa-icon [icon]="faUser" title="User"></fa-icon>
@@ -75,4 +111,5 @@
     </div>
   </div>
 </div>
+
 <router-outlet></router-outlet>

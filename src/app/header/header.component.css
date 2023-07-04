@@ -28,6 +28,10 @@ div {
 .header-left {
   font-size: 70px;
   font-weight: bold;
+  background-image: linear-gradient(to right bottom, #cf2323, #FFC52D);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .link {
@@ -49,7 +53,9 @@ div {
 
 }
 
-.icon:hover {
+.user:hover,
+.cart:hover,
+.search:hover {
   color: #FF3066;
 }
 
@@ -89,7 +95,7 @@ div {
   top: 70px;
   left: -93px;
   width: 600px;
-  height: 140px;
+  height: 120px;
   background-color: white;
   z-index: 1;
   display: flex;
@@ -131,3 +137,226 @@ div {
 }
 
 /* end product list */
+
+/* men */
+.product-men {
+  position: relative;
+}
+
+.product-list-men {
+  position: absolute;
+  top: 70px;
+  left: -40px;
+  width: 200px;
+  height: 80px;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  visibility: hidden;
+  opacity: 0.6;
+  box-shadow: 0 6px 10px;
+}
+
+.product-men:hover .product-list-men {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+
+.product-list-men li {
+  font-size: 17px;
+}
+
+.product-list-men ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 1rem;
+}
+
+.li-boot:hover a,
+.li-sandal:hover a,
+.li-sneaker:hover a {
+  color: #FF3066;
+}
+
+.li-boot,
+.li-sandal,
+.li-sneaker {
+  width: 100%;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.icon-angle {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 16px;
+}
+
+
+.li-sneaker-list {
+  position: absolute;
+  width: 100px;
+  height: 55px;
+  top: 0;
+  left: 230px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px;
+  visibility: hidden;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  opacity: 0.4;
+}
+
+.li-sneaker-list li {
+  font-size: 17px;
+}
+
+.li-sneaker:hover .li-sneaker-list {
+
+  visibility: visible;
+  left: 200px;
+  opacity: 1;
+}
+
+.li-sneaker-list .nike:hover,
+.adidas:hover {
+  color: #FF3066;
+}
+
+/* end men */
+
+
+
+/* products women */
+.product-women {
+  position: relative;
+}
+
+.product-list-women {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 200px;
+  height: 80px;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  visibility: hidden;
+  opacity: 0.4;
+  box-shadow: 0 6px 10px;
+}
+
+.product-women:hover .product-list-women {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+
+.product-list-women li {
+  font-size: 17px;
+}
+
+.product-list-women ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 1rem;
+}
+
+.li-boot:hover a,
+.li-sandal:hover a,
+.li-sneaker:hover a {
+  color: #FF3066;
+}
+
+.li-boot,
+.li-sandal,
+.li-sneaker {
+  width: 100%;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.icon-angle-women {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 16px;
+}
+
+
+.li-sneaker-list {
+  position: absolute;
+  width: 100px;
+  height: 55px;
+  top: 0;
+  left: 230px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px;
+  visibility: hidden;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  opacity: 0.4;
+}
+
+.li-sneaker-list li {
+  font-size: 17px;
+}
+
+.li-sneaker:hover .li-sneaker-list {
+
+  visibility: visible;
+  left: 200px;
+  opacity: 1;
+}
+
+.li-sneaker-list .nike:hover,
+.adidas:hover {
+  color: #FF3066;
+}
+
+/* end product women */
+
+/* search */
+.search {
+  position: relative;
+}
+
+.input-search {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  font-size: 24px;
+  visibility: hidden;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  opacity: 0.4;
+}
+
+.search:hover .input-search {
+  visibility: visible;
+  top: 50px;
+  opacity: 1;
+}
+
+.input-search input {
+  border: 1px solid #ccc;
+}
+
+.input-search button {
+  border: 1px solid #ccc;
+}
+
+.input-search button:hover {
+  background-color: #FF3066;
+  color: #fff;
+}

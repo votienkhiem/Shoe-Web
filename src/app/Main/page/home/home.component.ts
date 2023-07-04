@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Shoe } from 'src/shoe';
 
 
 @Component({

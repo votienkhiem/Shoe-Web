@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
-import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
 
 @Component({
@@ -10,6 +9,10 @@ import { Shoe } from 'src/shoe';
 })
 export class CartComponent {
   items = this.cart.getShoes();
+  // numCart: number | undefined = 0;
   constructor(private cart: CartService) { }
+  // ngOnInit(): void {
+  //   this.numCart = this.items.length;
+  // }
 
 }

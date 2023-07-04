@@ -5,56 +5,64 @@
       "name": "Sneaker",
       "price": 799,
       "description": "A large phone with one of the best screens",
-      "image": "assets/images/shoe1.jpg"
+      "image": "assets/images/shoe1.jpg",
+      "quantity": 1
     },
     {
       "id": 2,
       "name": "Nike Air Force 1",
       "price": 699,
       "description": "A great phone with one of the best cameras",
-      "image": "assets/images/shoe2.jpg"
+      "image": "assets/images/shoe2.jpg",
+      "quantity": 1
     },
     {
       "id": 3,
       "name": "Nike Air Max 97",
       "price": 299,
       "description": "",
-      "image": "assets/images/shoe3.jpg"
+      "image": "assets/images/shoe3.jpg",
+      "quantity": 1
     },
     {
       "id": 4,
       "name": "Converse",
       "price": 899,
       "description": "",
-      "image": "assets/images/shoe4.jpg"
+      "image": "assets/images/shoe4.jpg",
+      "quantity": 1
     },
     {
       "id": 5,
       "name": "Nike Jordan Dior",
       "price": 456,
       "description": "",
-      "image": "assets/images/shoe5.jpg"
+      "image": "assets/images/shoe5.jpg",
+      "quantity": 1
     },
     {
       "id": 6,
       "name": "Adidas Stan Smith",
       "price": 312,
       "description": "",
-      "image": "assets/images/shoe6.jpg"
+      "image": "assets/images/shoe6.jpg",
+      "quantity": 1
     },
     {
       "id": 7,
       "name": "Converse Chuck Taylor",
       "price": 785,
       "description": "",
-      "image": "assets/images/shoe7.jpg"
+      "image": "assets/images/shoe7.jpg",
+      "quantity": 1
     },
     {
       "id": 8,
       "name": "Vans Old Skool",
       "price": 563,
       "description": "",
-      "image": "assets/images/shoe8.jpg"
+      "image": "assets/images/shoe8.jpg",
+      "quantity": 1
     }
   ]
 }

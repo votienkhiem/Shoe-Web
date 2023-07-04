@@ -7,8 +7,42 @@
     <div class="link">
       <a routerLink="/home">Home</a>
     </div>
-    <div class="link">
+    <div class="link product-list">
       <a routerLink="/product">Products</a>
+      <div class="product-list-shoe">
+        <div class="men">
+          <ul>
+            <li class="title head-men">MEN</li>
+            <li>Sneaker</li>
+            <li>Sandal</li>
+            <li>Boot</li>
+          </ul>
+        </div>
+        <div class="women">
+          <ul>
+            <li class="title head-women">WOMEN</li>
+            <li>Sneaker</li>
+            <li>Sandal</li>
+            <li>Boot</li>
+          </ul>
+        </div>
+        <div class="sandal">
+          <ul>
+            <li class="title head-sandal">SANDAL</li>
+            <li>Sneaker</li>
+            <li>Sandal</li>
+            <li>Boot</li>
+          </ul>
+        </div>
+        <div class="street-wear">
+          <ul>
+            <li class="title head-street">STREET WEAR</li>
+            <li>Sneaker</li>
+            <li>Sandal</li>
+            <li>Boot</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="link">
       <a>Men</a>
@@ -35,6 +69,9 @@
     </div>
     <div class="icon cart">
       <fa-icon [icon]="faCartPlus" title="Cart" routerLink="/cart"></fa-icon>
+      <div class="circle-cart">
+        <span>0</span>
+      </div>
     </div>
   </div>
 </div>

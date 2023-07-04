@@ -20,12 +20,12 @@ export class CarouselComponent {
   @Input() indicators = true
   @Input() controls = true
   @Input() autoSlide = false
-  @Input() slideInterval = 2000
+  @Input() slideInterval = 3000
 
   ngOnInit(): void {
-    // if (this.autoSlide) {
-    //   this.autoSlideImages();
-    // }
+    if (this.autoSlide) {
+      this.autoSlideImages();
+    }
   }
   autoSlideImages(): void {
     setInterval(() => {

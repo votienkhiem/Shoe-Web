@@ -8,4 +8,26 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  images = [
+    {
+      imgSrc: 'assets/images/img1.jpg',
+      imgAlt: 'picture1'
+    },
+    {
+      imgSrc: 'assets/images/img2.jpg',
+      imgAlt: 'picture2'
+    },
+    {
+      imgSrc: 'assets/images/img3.jpg',
+      imgAlt: 'picture4'
+    },
+    {
+      imgSrc: 'assets/images/img4.jpg',
+      imgAlt: 'picture4'
+    },
+    {
+      imgSrc: 'assets/images/img5.jpg',
+      imgAlt: 'picture4'
+    },
+  ]
 }

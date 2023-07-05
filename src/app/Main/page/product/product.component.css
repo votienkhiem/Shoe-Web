@@ -45,10 +45,16 @@
   justify-content: center;
 }
 
-.category-shoe {
-  /* background-color: orange; */
+
+/* Category */
+.category-product {
   width: 100%;
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-shoe {
+  width: 100%;
 }
 
 .container-list-shoe h6 {
@@ -304,5 +310,98 @@
 }
 
 /* end street wear */
-
 /* end ul li category */
+
+
+.category-product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* category-prices */
+.category-prices {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+
+.name-prices .name {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 2px #FF3066 solid;
+}
+
+.name {
+  width: 100%;
+  float: left;
+  text-align: left;
+}
+
+
+.prices-input ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.prices-input ul li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.prices-input ul li span:hover {
+  color: #FF3066;
+  font-weight: bold;
+}
+
+.prices-input input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+/*end category-prices */
+
+
+
+
+
+/* category color */
+.category-colors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-colors .name {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 2px #FF3066 solid;
+  /* padding-top: 130px; */
+}
+
+.colors-input ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.colors-input ul li {
+  margin-bottom: 10px;
+  text-align: justify;
+
+}
+
+.colors-input input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+.colors-input ul li span:hover {
+  color: #FF3066;
+  font-weight: bold;
+}
+
+/* end category color */

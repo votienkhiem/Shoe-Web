@@ -15,60 +15,131 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-xl-2">
-      <div class="category-shoe">
-        <h5>Category product</h5>
-        <nav class="nav-category">
-          <ul class="nav-ul-category">
-            <li class="nav-item nav-men">
-              <a href="">Men</a>
-              <label for="btn-check-drop">
-                <fa-icon [icon]="faCaretDown"></fa-icon>
-              </label>
-              <input type="checkbox" name="" id="btn-check-drop" />
-              <ul class="dropdown-men">
-                <li><a href="">Sneaker</a></li>
-                <li><a href="">Sandal</a></li>
-                <li><a href="">Boot</a></li>
-              </ul>
-            </li>
-            <li class="nav-item nav-women">
-              <a href="">Women</a>
-              <label for="btn-check-drop-women">
-                <fa-icon [icon]="faCaretDown"></fa-icon>
-              </label>
-              <input type="checkbox" name="" id="btn-check-drop-women" />
-              <ul class="dropdown-women">
-                <li><a href="">Sneaker</a></li>
-                <li><a href="">Sandal</a></li>
-                <li><a href="">Boot</a></li>
-              </ul>
-            </li>
-            <li class="nav-item nav-sandal">
-              <a href="">Sandal</a>
-              <label for="btn-check-drop-sandal">
-                <fa-icon [icon]="faCaretDown"></fa-icon>
-              </label>
-              <input type="checkbox" name="" id="btn-check-drop-sandal" />
-              <ul class="dropdown-sandal">
-                <li><a href="">Sneaker</a></li>
-                <li><a href="">Sandal</a></li>
-                <li><a href="">Boot</a></li>
-              </ul>
-            </li>
-            <li class="nav-item nav-street-wear">
-              <a href="">Street wear</a>
-              <label for="btn-check-drop-street-wear">
-                <fa-icon [icon]="faCaretDown"></fa-icon>
-              </label>
-              <input type="checkbox" name="" id="btn-check-drop-street-wear" />
-              <ul class="dropdown-street-wear">
-                <li><a href="">Sneaker</a></li>
-                <li><a href="">Sandal</a></li>
-                <li><a href="">Boot</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="category-product">
+            <div class="category-shoe">
+              <h5>Category product</h5>
+              <nav class="nav-category">
+                <ul class="nav-ul-category">
+                  <li class="nav-item nav-men">
+                    <a href="">Men</a>
+                    <label for="btn-check-drop">
+                      <fa-icon [icon]="faCaretDown"></fa-icon>
+                    </label>
+                    <input type="checkbox" name="" id="btn-check-drop" />
+                    <ul class="dropdown-men">
+                      <li><a href="">Sneaker</a></li>
+                      <li><a href="">Sandal</a></li>
+                      <li><a href="">Boot</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item nav-women">
+                    <a href="">Women</a>
+                    <label for="btn-check-drop-women">
+                      <fa-icon [icon]="faCaretDown"></fa-icon>
+                    </label>
+                    <input type="checkbox" name="" id="btn-check-drop-women" />
+                    <ul class="dropdown-women">
+                      <li><a href="">Sneaker</a></li>
+                      <li><a href="">Sandal</a></li>
+                      <li><a href="">Boot</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item nav-sandal">
+                    <a href="">Sandal</a>
+                    <label for="btn-check-drop-sandal">
+                      <fa-icon [icon]="faCaretDown"></fa-icon>
+                    </label>
+                    <input type="checkbox" name="" id="btn-check-drop-sandal" />
+                    <ul class="dropdown-sandal">
+                      <li><a href="">Sneaker</a></li>
+                      <li><a href="">Sandal</a></li>
+                      <li><a href="">Boot</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item nav-street-wear">
+                    <a href="">Street wear</a>
+                    <label for="btn-check-drop-street-wear">
+                      <fa-icon [icon]="faCaretDown"></fa-icon>
+                    </label>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="btn-check-drop-street-wear"
+                    />
+                    <ul class="dropdown-street-wear">
+                      <li><a href="">Sneaker</a></li>
+                      <li><a href="">Sandal</a></li>
+                      <li><a href="">Boot</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="category-prices">
+              <aside class="name-prices">
+                <h5 class="name">Price</h5>
+              </aside>
+              <div class="prices-input">
+                <nav class="nav-prices">
+                  <ul>
+                    <li>
+                      <input type="checkbox" name="" id="filter2" />
+                      <span><label for="filter2">500$ - 1000$</label></span>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="filter3" />
+                      <span><label for="filter3">1000$ - 1500$</label></span>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="filter4" />
+                      <span><label for="filter4">1500$ - 3000$</label></span>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="filter5" />
+                      <span><label for="filter5">over 3000$</label></span>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="category-colors">
+              <aside class="name-colors">
+                <h5 class="name">Color</h5>
+              </aside>
+              <div class="colors-input">
+                <ul>
+                  <li>
+                    <input type="checkbox" name="" id="filter-yellow" />
+                    <span><label for="filter-yellow">Yellow</label></span>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="" id="filter-red" />
+                    <span><label for="filter-red">Red</label></span>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="" id="filter-white" />
+                    <span><label for="filter-white">White</label></span>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="" id="filter-black" />
+                    <span><label for="filter-black">Black</label></span>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="" id="filter-pink" />
+                    <span><label for="filter-pink">Pink</label></span>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="" id="filter-orange" />
+                    <span><label for="filter-orange">Orange</label></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-xl-10">
@@ -83,8 +154,8 @@
               <option selected>Default</option>
               <option value="1">A → Z</option>
               <option value="2">Z → A</option>
-              <option value="3">Prices increase gradually</option>
-              <option value="4">Prices decrease gradually</option>
+              <option value="3">Price low to high</option>
+              <option value="4">Price high to low</option>
             </select>
           </div>
         </div>

@@ -28,3 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 start json
 json-server --watch db.json
+/_ Mobile: width < 740px _/
+/_ Tablet: width >= 740px and width < 1024px _/

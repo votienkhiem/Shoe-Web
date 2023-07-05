@@ -1,7 +1,3 @@
-:root {
-  --primary-color1: #FF3066;
-}
-
 .product-shoe a {
   cursor: pointer;
   text-decoration: none;
@@ -22,7 +18,7 @@
 }
 
 .product-shoe {
-  width: 240px;
+  width: 250px;
   height: 340px;
   /* background-color: rgb(215, 214, 214); */
   text-align: center;
@@ -50,7 +46,7 @@
 }
 
 .category-shoe {
-  background-color: orange;
+  /* background-color: orange; */
   width: 100%;
   height: 100vh;
 }
@@ -92,5 +88,221 @@
   width: 240px;
 }
 
-/* Mobile: width < 740px */
-/* Tablet: width >= 740px and width < 1024px */
+.allShoe {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.name-AllShoe {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.arrange-AllShoe {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.arrange-AllShoe label {
+  margin-right: 10px;
+  font-size: 16px;
+
+}
+
+.category-shoe {
+  padding-top: 25px;
+
+}
+
+.col-xl-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.category-shoe h5 {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 2px #FF3066 solid;
+  float: left;
+  margin-left: 5px;
+}
+
+/* ul li category */
+.nav-ul-category {
+  margin-bottom: 0;
+  padding-left: 0;
+  float: left;
+  text-align: justify;
+  width: 100%;
+}
+
+.nav-ul-category a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.nav-category li {
+  margin: 10px;
+
+}
+
+.nav-ul-category li a:hover {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+.nav-category .nav-item:not(:last-child) {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #F2F2F2;
+}
+
+.nav-item {
+  font-size: 18px;
+}
+
+.nav-item label {
+  float: right;
+  cursor: pointer;
+}
+
+/* nav-men */
+.nav-men .dropdown-men {
+  display: none;
+}
+
+.nav-men input {
+  display: none;
+}
+
+[id^=btn]:checked+ul {
+  display: block;
+}
+
+
+.dropdown-men {
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.dropdown-men ul li a:hover {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+/* end nav-men */
+
+
+
+
+
+
+
+
+/* nav-women */
+
+.nav-women .dropdown-women {
+  display: none;
+}
+
+.dropdown-women {
+  padding-left: 0;
+}
+
+.nav-women input {
+  display: none;
+}
+
+[id^=btn-check-drop-women]:checked+ul {
+  display: block;
+}
+
+
+.dropdown-women {
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.dropdown-women ul li a:hover {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+/*end nav-women */
+
+
+
+
+
+
+/* sandal */
+
+.nav-sandal .dropdown-sandal {
+  display: none;
+}
+
+.dropdown-sandal {
+  padding-left: 0;
+}
+
+.nav-sandal input {
+  display: none;
+}
+
+[id^=btn-check-drop-sandal]:checked+ul {
+  display: block;
+}
+
+
+.dropdown-sandal {
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.dropdown-sandal ul li a:hover {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+/* end sandal */
+
+
+
+/* street wear */
+
+
+.nav-street-wear .dropdown-street-wear {
+  display: none;
+}
+
+.dropdown-street-wear {
+  padding-left: 0;
+}
+
+.nav-street-wear input {
+  display: none;
+}
+
+[id^=btn-check-drop-street-wear]:checked+ul {
+  display: block;
+}
+
+
+.dropdown-street-wear {
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.dropdown-street-wear ul li a:hover {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+/* end street wear */
+
+/* end ul li category */

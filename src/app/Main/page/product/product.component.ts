@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product',
@@ -10,7 +11,7 @@ import { Shoe } from 'src/shoe';
 })
 export class ProductComponent {
   shoes: Shoe[] = [];
-
+  faCaretDown = faCaretDown;
   constructor(
     private shoeService: ShoeingService,
     private cart: CartService,

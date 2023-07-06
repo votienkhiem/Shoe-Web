@@ -4,7 +4,7 @@
 
 /* product-detail-image */
 .product-detail-image {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 100%;
   /* height: 900px; */
   display: flex;
@@ -81,6 +81,7 @@
   font-size: 30px;
   font-weight: bold;
   text-align: justify;
+  color: #FF3066;
 }
 
 .brand ul {
@@ -90,9 +91,181 @@
   text-align: justify;
 }
 
-/* end product-detail-text */
-.product-detail-ship {
-  background-color: bisque;
-  width: 100%;
-  height: 700px;
+.brand .span-brand {
+  font-weight: bold;
+  color: #FF3066;
 }
+
+.brand .span-status {
+  font-weight: bold;
+  color: #FF3066;
+}
+
+.colors-shoe {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.colors-shoe span {
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* circle color */
+.colors-shoe .color .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 1px solid #f2f2f2;
+}
+
+.colors-shoe .color .color-red {
+  background-color: red;
+}
+
+.colors-shoe .color .color-white {
+  background-color: white;
+}
+
+.colors-shoe .color .color-pink {
+  background-color: pink;
+}
+
+.colors-shoe .color .color-black {
+  background-color: black;
+}
+
+.colors-shoe .color .color-blue {
+  background-color: blue;
+}
+
+.colors-shoe .color .color-green {
+  background-color: green;
+}
+
+.colors-shoe .color .color-gray {
+  background-color: gray;
+}
+
+.colors-shoe .color .color-brown {
+  background-color: brown;
+}
+
+.colors-shoe .color .color-beige {
+  background-color: beige;
+}
+
+.colors-shoe .color .color-purple {
+  background-color: purple;
+}
+
+.colors-shoe .color .color-orange {
+  background-color: orange;
+}
+
+.colors-shoe .color .color-yellow {
+  background-color: yellow;
+}
+
+.colors-shoe .color ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colors-shoe .color ul li {
+  margin: 3px 5px;
+  transition: 0.1s;
+}
+
+.colors-shoe .color ul li div:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* size */
+.sizes-shoe {
+  display: flex;
+  flex-direction: column;
+}
+
+.sizes-shoe span {
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+}
+
+.sizes-shoe .sizes ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* end product-detail-text */
+
+/* product-detail-ship */
+.product-detail-ship {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ship {
+  width: inherit;
+  height: 200px;
+  border: 2px solid #f2f2f2;
+}
+
+.ship img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.ship ul {
+  margin: 0;
+  padding: 0;
+}
+
+.delivery p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ship .delivery {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ship .return {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.return p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ship .sale {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sale p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/*end product-detail-ship */

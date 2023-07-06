@@ -1,5 +1,53 @@
-<p>product-details works!</p>
-<div *ngIf="shoes">
+<!-- <div *ngIf="shoes">
   <img src="{{ shoes.image }}" alt="" />
   <button type="submit" (click)="addToCart(shoes)">add to cart</button>
+</div> -->
+<div class="container text-center">
+  <div class="row product-detail" *ngIf="shoes">
+    <div class="col-xl-5">
+      <div class="row">
+        <div class="col-xl-12 product-detail-image">
+          <img src="{{ shoes.image }}" alt="" />
+
+          <div class="description">
+            <h5>Product details</h5>
+            <ul>
+              <li *ngFor="let a of shoes.detail">{{ [a] }}</li>
+            </ul>
+          </div>
+          <div class="history">
+            <h5>History</h5>
+            <p>{{ shoes.history }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-5">
+      <div class="row">
+        <div class="col-xl-12 product-detail-text">
+          <h5>{{ shoes.name }}</h5>
+          <div class="brand">
+            <ul>
+              <li><span>Brand: </span>{{ shoes.brand }}</li>
+              <li><span>Status: </span>{{ shoes.status }}</li>
+              <li>{{ shoes.description }}</li>
+            </ul>
+          </div>
+          <h4>{{ shoes.price | number : "1.0-2" }}$</h4>
+          <div class="colors-shoe"></div>
+          <div class="size-shoe"></div>
+          <div class="check">
+            <button type="submit" (click)="addToCart(shoes)">
+              add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2">
+      <div class="row">
+        <div class="col-xl-12 product-detail-ship"></div>
+      </div>
+    </div>
+  </div>
 </div>

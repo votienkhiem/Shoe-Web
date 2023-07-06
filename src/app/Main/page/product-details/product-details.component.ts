@@ -28,6 +28,10 @@ export class ProductDetailsComponent {
     this.cart.addToCart(shoe);
     window.alert("Your product has been added to the cart!")
   }
+
   ngOnInit(): void {
+
   }
+
+
 }

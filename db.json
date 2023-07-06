@@ -6,23 +6,51 @@
       "price": 799,
       "description": "A large phone with one of the best screens",
       "image": "assets/images/shoe1.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Converse",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas."
     },
     {
       "id": 2,
       "name": "Nike Air Force 1",
       "price": 699,
-      "description": "A great phone with one of the best cameras",
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
       "image": "assets/images/shoe2.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 3,
       "name": "Nike Air Max 97",
       "price": 299,
-      "description": "",
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
       "image": "assets/images/shoe3.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 4,
@@ -30,39 +58,84 @@
       "price": 899,
       "description": "",
       "image": "assets/images/shoe4.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Converse",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 5,
       "name": "Nike Jordan Dior",
       "price": 456,
-      "description": "",
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
       "image": "assets/images/shoe5.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 6,
       "name": "Adidas Stan Smith",
       "price": 312,
-      "description": "",
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
       "image": "assets/images/shoe6.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Adidas",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 7,
       "name": "Converse Chuck Taylor",
       "price": 785,
-      "description": "",
+      "description": "This Chuck 70 helps you express yourself with a new wintery wash",
       "image": "assets/images/shoe7.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Converse",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     },
     {
       "id": 8,
       "name": "Vans Old Skool",
       "price": 563,
-      "description": "",
+      "description": "Create your own luck with iconic Chuck 70 sneakers in new, casino-inspired prints.",
       "image": "assets/images/shoe8.jpg",
-      "quantity": 1
+      "quantity": 1,
+      "brand": "Vans",
+      "status": "Out of stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ]
     }
   ]
 }

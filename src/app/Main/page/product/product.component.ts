@@ -26,9 +26,8 @@ export class ProductComponent {
     this.cart.addToCart(shoe);
   }
 
-
   ngOnInit() {
-    console.log('so luog san pham', this.arrCart?.length)
+
   }
 
 }

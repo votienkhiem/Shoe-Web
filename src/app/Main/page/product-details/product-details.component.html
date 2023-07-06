@@ -28,14 +28,81 @@
           <h5>{{ shoes.name }}</h5>
           <div class="brand">
             <ul>
-              <li><span>Brand: </span>{{ shoes.brand }}</li>
-              <li><span>Status: </span>{{ shoes.status }}</li>
+              <li>
+                <span>Brand: </span
+                ><span class="span-brand">{{ shoes.brand }}</span>
+              </li>
+              <li>
+                <span>Status: </span
+                ><span class="span-status">{{ shoes.status }}</span>
+              </li>
               <li>{{ shoes.description }}</li>
             </ul>
           </div>
           <h4>{{ shoes.price | number : "1.0-2" }}$</h4>
-          <div class="colors-shoe"></div>
-          <div class="size-shoe"></div>
+          <div class="colors-shoe">
+            <span>Color</span>
+            <div class="color">
+              <ul>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-red"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-white"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-pink"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-black"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-blue"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-green"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-gray"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-brown"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-beige"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-purple"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-orange"></div>
+                </li>
+                <li>
+                  <a href=""></a>
+                  <div class="circle color-yellow"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sizes-shoe">
+            <span>Size</span>
+            <div class="sizes">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+          </div>
           <div class="check">
             <button type="submit" (click)="addToCart(shoes)">
               add to cart
@@ -46,7 +113,30 @@
     </div>
     <div class="col-xl-2">
       <div class="row">
-        <div class="col-xl-12 product-detail-ship"></div>
+        <div class="col-xl-12 product-detail-ship">
+          <div class="ship">
+            <ul>
+              <li>
+                <div class="delivery">
+                  <img src="assets/images/delivery.png" alt="" />
+                  <p>Free delivery</p>
+                </div>
+              </li>
+              <li>
+                <div class="return">
+                  <img src="assets/images/goods.png" alt="" />
+                  <p>Return goods</p>
+                </div>
+              </li>
+              <li>
+                <div class="sale">
+                  <img src="assets/images/big sale.png" alt="" />
+                  <p>Big sale</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

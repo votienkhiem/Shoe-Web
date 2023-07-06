@@ -20,11 +20,15 @@ export class ProductComponent {
       this.shoes = arrShoes
     });
   }
+  cartSes: any = sessionStorage.getItem("cartSession");
+  arrCart = JSON.parse(this.cartSes)
   addToCart(shoe: Shoe) {
     this.cart.addToCart(shoe);
   }
 
 
-
+  ngOnInit() {
+    console.log('so luog san pham', this.arrCart?.length)
+  }
 
 }

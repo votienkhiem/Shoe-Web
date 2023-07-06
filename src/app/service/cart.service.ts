@@ -10,6 +10,8 @@ export class CartService {
   constructor() { }
   addToCart(shoe: Shoe) {
     this.shoes.push(shoe);
+    // save cart on sessionStorage
+    sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
   }
   getShoes() {
     return this.shoes

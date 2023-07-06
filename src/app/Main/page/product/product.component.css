@@ -353,6 +353,10 @@
   text-align: justify;
 }
 
+.nav-prices label {
+  cursor: pointer;
+}
+
 .prices-input ul li span:hover {
   color: #FF3066;
   font-weight: bold;
@@ -393,6 +397,10 @@
   margin-bottom: 10px;
   text-align: justify;
 
+}
+
+.colors-input label {
+  cursor: pointer;
 }
 
 .colors-input input[type="checkbox"] {

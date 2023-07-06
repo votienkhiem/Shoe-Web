@@ -17,7 +17,8 @@ export class HeaderComponent {
   faUser = faUser;
   faCartPlus = faCartPlus;
   faAngleRight = faAngleRight;
-
+  cartSes: any = sessionStorage.getItem("cartSession");
+  arrCart = JSON.parse(this.cartSes)?.length
   constructor(private cart: CartService) { }
   ngOnInit(): void {
   }

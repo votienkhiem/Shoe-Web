@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { CartService } from 'src/app/service/cart.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +14,8 @@ import { Shoe } from 'src/shoe';
 export class ProductDetailsComponent {
 
   shoes: Shoe | undefined
+  faPlus = faPlus;
+  faMinus = faMinus;
 
   constructor(
     private route: ActivatedRoute,

@@ -60,7 +60,7 @@
 
 /* product-detail-text */
 .product-detail-text {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 100%;
   height: 700px;
   display: flex;
@@ -102,8 +102,13 @@
 }
 
 .colors-shoe {
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
+}
+
+.colors-shoe .color {
+  padding-top: 10px;
   width: 240px;
 }
 
@@ -111,6 +116,7 @@
   font-weight: bold;
   text-align: left;
   font-size: 18px;
+  border-bottom: 1px solid #f2f2f2
 }
 
 /* circle color */
@@ -188,6 +194,7 @@
 
 /* size */
 .sizes-shoe {
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -196,12 +203,68 @@
   font-weight: bold;
   text-align: left;
   font-size: 18px;
+  border-bottom: 1px solid #f2f2f2;
 }
 
-.sizes-shoe .sizes ul {
-  margin: 0;
-  padding: 0;
+.sizes-shoe .sizes .form-group {
+  padding-top: 10px;
+  text-align: left;
 }
+
+.sizes-shoe .sizes .form-group .form-select {
+  width: 140px;
+}
+
+/* quantity */
+.quantity-shoe {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-shoe .d-flex {
+  margin-top: 10px;
+}
+
+
+.quantity-shoe .d-flex input {
+  width: 40px;
+}
+
+.quantity-shoe span {
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* check */
+.check {
+  padding-top: 15px;
+}
+
+.check button {
+  width: 170px;
+  background-color: #FF3066;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  float: left;
+}
+
+.check button:hover {
+  background-color: #ffffff;
+  color: #FF3066;
+  border: #FF3066 1px solid;
+}
+
+/* end check */
 
 /* end product-detail-text */
 
@@ -210,6 +273,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+}
+
+.product-detail-ship .promotion img {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 .ship {

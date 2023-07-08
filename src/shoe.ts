@@ -9,4 +9,5 @@ export interface Shoe {
   status: string,
   detail: string,
   history: string,
+  size: string,
 }

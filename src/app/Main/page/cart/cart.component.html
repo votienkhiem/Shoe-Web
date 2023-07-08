@@ -1,4 +1,70 @@
-<p>cart works!</p>
-<div *ngFor="let a of items">
+<!-- <div *ngFor="let a of items">
   <span>{{ a.name }}</span>
+</div> -->
+<div class="container text-center">
+  <div class="row Cart">
+    <div class="col-xl-12">
+      <div class="your-cart">
+        <span>Your Cart</span>
+        <div class="cart-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#img</th> -->
+                <th scope="col" colspan="2"><span>Product</span></th>
+                <th scope="col"><span>Price</span></th>
+                <th scope="col"><span>Quantity</span></th>
+                <th scope="col"><span>Provisional</span></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of items">
+              <tr>
+                <th scope="row"><img src="{{ item.image }}" alt="" /></th>
+                <td>
+                  <span>{{ item.name }}</span>
+                </td>
+                <td>
+                  <span>{{ item.price }}$</span>
+                </td>
+                <td>
+                  <div class="quantity">
+                    <input
+                      type="button"
+                      name="minus"
+                      value="-"
+                      id=""
+                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                    />
+                    <input type="number" name="number" min="0" value="1" />
+                    <input
+                      type="button"
+                      name="plus"
+                      value="+"
+                      id=""
+                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                    />
+                  </div>
+                </td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cart-checkout">
+          <div class="return"></div>
+          <div class="checkout">
+            <img src="assets/images/checkout-border.jpg" alt="" />
+            <span>Your Order</span>
+            <div class="oder">
+              <tr>
+                <td colspan="2">Subtotal</td>
+                <td>1000$</td>
+              </tr>
+              <button>Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

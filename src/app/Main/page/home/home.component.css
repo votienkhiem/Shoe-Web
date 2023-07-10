@@ -9,6 +9,8 @@
   height: 100%;
   object-fit: cover;
   margin: 40px 10px 0 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .home-banner {
@@ -47,19 +49,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  transition: 0.2s;
+  transition: 0.8s;
+  transition-delay: 0.2s;
 }
 
 .home .shop-by-style .promotion img {
   width: 365px;
   height: 430px;
   object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .home .shop-by-style .promotion ul li:hover {
   cursor: pointer;
-  background-color: black;
   opacity: 0.7;
+  transform: scale(1.03);
 
 }
 
@@ -100,6 +106,10 @@
   color: black;
 }
 
+.new-arrivals .promotion span a:hover {
+  color: #FF3066;
+}
+
 .new-arrivals .promotion .pro-men {
   display: flex;
   justify-content: space-evenly;
@@ -110,6 +120,8 @@
   height: 680px;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .new-arrivals .promotion .pro-men .shoe-men {
@@ -121,6 +133,8 @@
   height: 335px;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .new-arrivals .promotion .pro-men .shoe-men li:first-child img {
@@ -153,6 +167,10 @@
   color: black;
 }
 
+.new-arrivals .promotion .text-women a:hover {
+  color: #FF3066;
+}
+
 .new-arrivals .promotion .pro-women {
   display: flex;
   justify-content: space-evenly;
@@ -164,6 +182,8 @@
   height: 680px;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .new-arrivals .promotion .pro-women .shoe-women {
@@ -175,6 +195,8 @@
   height: 335px;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px;
 }
 
 .new-arrivals .promotion .pro-women .shoe-women li:first-child img {
@@ -186,3 +208,73 @@
 }
 
 /* end women */
+
+
+/* service */
+.home .service {
+  width: 1400px;
+  display: flex;
+  margin: 40px 50px 20px 50px;
+  justify-content: center;
+}
+
+.service .your-service {
+  margin-top: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service .your-service fa-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.service .your-service span {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold
+}
+
+.service .your-service p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.service .your-service a {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.service .your-service a:hover {
+  opacity: 0.8;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.service .shipping {
+  border-top: 3px solid rgba(0, 0, 0, 0.30);
+  border-right: 3px solid rgba(0, 0, 0, 0.30);
+  border-radius: 0px 10px 0px 0px;
+}
+
+.service .return {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.30);
+
+}
+
+.service .package {
+  border-left: 3px solid rgba(0, 0, 0, 0.30);
+  border-top: 3px solid rgba(0, 0, 0, 0.30);
+  border-radius: 10px 0px 0px 0px;
+}
+
+
+/* end service */

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { Shoe } from 'src/shoe';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import { faBoxes } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsSpin } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -12,6 +16,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent {
   faArrowRight = faArrowRight;
   faArrowLeft = faArrowLeft;
+  faTruckFast = faTruckFast;
+  faArrowsSpin = faArrowsSpin;
+  faBoxes = faBoxes;
   images = [
     {
       imgSrc: 'assets/images/img1.jpg',

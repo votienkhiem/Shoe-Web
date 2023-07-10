@@ -1,2 +1,56 @@
 <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
-<p>hello</p>
+
+<div class="home">
+  <div class="home-banner">
+    <img src="assets/images/sale-Banner.jpg" alt="" />
+    <span>Sale: Up to 50% off Select Style*</span>
+  </div>
+  <div class="shop-by-style">
+    <span>Shop By Style</span>
+    <div class="promotion">
+      <ul>
+        <li><img src="assets/images/shopbystyle1.jpg" alt="" /></li>
+        <li><img src="assets/images/shopbystyle2.jpg" alt="" /></li>
+        <li><img src="assets/images/shopbystyle3.jpg" alt="" /></li>
+        <li><img src="assets/images/shopbystyle4.jpg" alt="" /></li>
+      </ul>
+    </div>
+  </div>
+  <div class="new-arrivals">
+    <span>New Arrivals</span>
+    <div class="promotion">
+      <!-- men -->
+      <span
+        ><fa-icon [icon]="faArrowRight"></fa-icon><a href="">Shop Men</a></span
+      >
+      <div class="pro-men">
+        <ul class="men">
+          <li>
+            <img src="assets/images/menshop.jpg" alt="" />
+          </li>
+          <!-- <li><img src="assets/images/womenshop.jpg" alt="" /></li> -->
+        </ul>
+        <ul class="shoe-men">
+          <li><img src="assets/images/shoemen.jpg" alt="" /></li>
+          <li><img src="assets/images/shoemen2.jpg" alt="" /></li>
+        </ul>
+      </div>
+      <!-- women -->
+      <span class="text-women"
+        ><a href="">Shop Women</a><fa-icon [icon]="faArrowLeft"></fa-icon
+      ></span>
+      <div class="pro-women">
+        <ul class="women">
+          <li>
+            <img src="assets/images/womenshop.jpg" alt="" />
+          </li>
+          <!-- <li><img src="assets/images/womenshop.jpg" alt="" /></li> -->
+        </ul>
+        <ul class="shoe-women">
+          <li><img src="assets/images/shoewomen.jpg" alt="" /></li>
+          <li><img src="assets/images/shoewomen2.jpg" alt="" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

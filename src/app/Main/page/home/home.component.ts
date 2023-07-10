@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Shoe } from 'src/shoe';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -8,7 +10,8 @@ import { Shoe } from 'src/shoe';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  faArrowRight = faArrowRight;
+  faArrowLeft = faArrowLeft;
   images = [
     {
       imgSrc: 'assets/images/img1.jpg',

@@ -17,6 +17,20 @@
   flex-wrap: wrap;
 }
 
+.selected {
+  color: #30d9ff;
+}
+
+.container-list-shoe .showSize {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #30ff52;
+  width: 240px;
+  height: 200px;
+  top: 0;
+}
+
 .product-shoe {
   width: 250px;
   height: 340px;
@@ -80,6 +94,11 @@
   border: solid 1px #FF3066;
 }
 
+.btn-submit-cart:active {
+  background-color: black;
+  opacity: 0.5;
+}
+
 .btn-submit-cart {
   width: 240px;
   height: 40px;
@@ -88,6 +107,7 @@
   border: none;
   color: white;
   visibility: hidden;
+  transition-delay: 0.1s;
 }
 
 .shoe-name {

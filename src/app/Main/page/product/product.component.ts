@@ -12,6 +12,8 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 export class ProductComponent {
   shoes: Shoe[] = [];
   faCaretDown = faCaretDown;
+  isShow = false
+
   constructor(
     private shoeService: ShoeingService,
     private cart: CartService,
@@ -22,7 +24,8 @@ export class ProductComponent {
   }
   cartSes: any = sessionStorage.getItem("cartSession");
   arrCart = JSON.parse(this.cartSes)
-  addToCart(shoe: Shoe) {
+  addToCart(shoe: Shoe): void {
+    window.alert("Your product has been added to the cart!")
     this.cart.addToCart(shoe);
   }
 

@@ -6,13 +6,17 @@
     <div class="col-xl-12">
       <div class="your-cart">
         <span>Your Cart</span>
-        <div class="cart-table">
+        <div class="none-product" *ngIf="items.length === 0">
+          <span>Your cart is empty!!!!</span>
+        </div>
+        <div class="cart-table" *ngIf="items.length > 0">
           <table class="table">
             <thead>
               <tr>
                 <!-- <th scope="col">#img</th> -->
                 <th scope="col" colspan="2"><span>Product</span></th>
                 <th scope="col"><span>Price</span></th>
+                <th scope="col"><span>Size</span></th>
                 <th scope="col"><span>Quantity</span></th>
                 <th scope="col"><span>Provisional</span></th>
               </tr>
@@ -27,38 +31,61 @@
                   <span>{{ item.price }}$</span>
                 </td>
                 <td>
+                  <select name="size" id="" class="select-size">
+                    <option value="" *ngFor="let a of item.size; index as i">
+                      {{ a }}
+                    </option>
+                  </select>
+                </td>
+                <td>
                   <div class="quantity">
-                    <input
+                    <!-- <input
                       type="button"
                       name="minus"
                       value="-"
                       id=""
                       onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    />
-                    <input type="number" name="number" min="0" value="1" />
+                    /> -->
                     <input
+                      [(ngModel)]="item.quantity"
+                      type="number"
+                      name="number"
+                      min="0"
+                      value="1"
+                    />
+                    <!-- <input
                       type="button"
                       name="plus"
                       value="+"
                       id=""
                       onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    />
+                    /> -->
                   </div>
                 </td>
-                <td>@mdo</td>
+                <td>
+                  <span>{{ item.price * item.quantity }}$</span>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="cart-checkout">
+        <div class="cart-checkout" *ngIf="items.length > 0">
           <div class="return"></div>
           <div class="checkout">
             <img src="assets/images/checkout-border.jpg" alt="" />
             <span>Your Order</span>
             <div class="oder">
               <tr>
-                <td colspan="2">Subtotal</td>
-                <td>1000$</td>
+                <td colspan="2">Total</td>
+                <td>
+                  <span>{{ totalProductQuantity() }}</span>
+                </td>
+              </tr>
+              <tr class="payment">
+                <td colspan="2">Total Payment</td>
+                <td>
+                  <span>{{ total() }}$</span>
+                </td>
               </tr>
               <button>Checkout</button>
             </div>

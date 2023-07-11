@@ -14,5 +14,19 @@ export class CartComponent {
   // ngOnInit(): void {
   //   this.numCart = this.items.length;
   // }
-
+  total(): number {
+    let totals: number = 0;
+    this.items.forEach(item => totals += item.price * item.quantity);
+    return totals;
+  }
+  totalProductQuantity(): number {
+    let totalQuantity: number = 0;
+    this.items.forEach(item => totalQuantity += item.quantity);
+    return totalQuantity;
+  }
+  minus(): number {
+    let totalQuantity: number = 0;
+    this.items.forEach(item => totalQuantity = item.quantity--);
+    return totalQuantity
+  }
 }

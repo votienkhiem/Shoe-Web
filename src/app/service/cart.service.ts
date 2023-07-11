@@ -9,7 +9,14 @@ export class CartService {
 
   constructor() { }
   addToCart(shoe: Shoe) {
-    this.shoes.push(shoe);
+    var index = this.shoes.findIndex(item => item.id === shoe.id)
+    if (index >= 0) {
+      this.shoes[index].quantity++;
+    }
+    else {
+
+      this.shoes.push(shoe);
+    }
     // save cart on sessionStorage
     sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
   }

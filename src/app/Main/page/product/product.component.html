@@ -159,6 +159,7 @@
             </select>
           </div>
         </div>
+
         <div
           class="col-xl-4 col-md-6 col-sm-12 product-shoe"
           *ngFor="let shoe of shoes"
@@ -166,6 +167,22 @@
           <div class="container-list-shoe">
             <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+
+              <div class="showSize" *ngIf="isShow">
+                <span>Size</span>
+                <select name="size" id="">
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                </select>
+              </div>
+              <!-- <button
+                type="submit"
+                class="btn-submit-cart"
+                (click)="isShow = true"
+                *ngIf="!isShow"
+              >
+                ADD TO CART
+              </button> -->
               <button
                 type="submit"
                 class="btn-submit-cart"

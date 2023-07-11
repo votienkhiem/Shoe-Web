@@ -228,7 +228,8 @@
 
 
 .quantity-shoe .d-flex input {
-  width: 40px;
+  width: 50px;
+  font-weight: bold;
 }
 
 .quantity-shoe span {

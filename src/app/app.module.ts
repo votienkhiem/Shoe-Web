@@ -11,6 +11,7 @@ import { ProductComponent } from './Main/page/product/product.component';
 import { ProductDetailsComponent } from './Main/page/product-details/product-details.component';
 import { CartComponent } from './Main/page/cart/cart.component';
 import { CarouselComponent } from './Main/page/carousel/carousel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CarouselComponent } from './Main/page/carousel/carousel.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

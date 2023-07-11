@@ -27,6 +27,17 @@
   border-bottom: 3px solid #f2f2f2; */
 }
 
+.cart-table .table select {
+  width: 120px;
+  height: 30px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.cart-table .table .form-select {
+  padding: 0;
+}
+
 .cart-table .table .quantity {
   display: flex;
   justify-content: center;
@@ -37,7 +48,10 @@
 }
 
 .cart-table .table .quantity input[type="number"] {
-  width: 40px;
+  width: 50px;
+  height: 30px;
+  font-weight: bold;
+  border: 2px solid black;
 }
 
 .cart-table .table .quantity input[type="button"] {
@@ -62,6 +76,10 @@
   max-width: 80px;
   max-height: 80px;
   object-fit: cover;
+}
+
+.cart-table .table thead span {
+  font-weight: bold;
 }
 
 .cart-table .table thead span {
@@ -122,6 +140,7 @@
   font-weight: bold;
   transition: 0.3s;
   float: left;
+  margin-bottom: 10px;
 }
 
 .your-cart .cart-checkout .checkout .oder button:hover {
@@ -134,7 +153,7 @@
   opacity: 0.4;
 }
 
-.your-cart .cart-checkout .checkout .oder tr {
+.your-cart .cart-checkout .checkout .oder tr:first-child {
 
   display: flex;
   align-items: center;
@@ -143,5 +162,16 @@
   font-size: 28px;
   font-weight: bold;
   border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+
+.your-cart .cart-checkout .checkout .oder .payment {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 28px;
+  font-weight: bold;
   padding-bottom: 10px;
 }

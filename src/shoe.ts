@@ -10,4 +10,5 @@ export interface Shoe {
   detail: string,
   history: string,
   size: string,
+  color: string,
 }

@@ -25,7 +25,7 @@ export class ProductComponent {
   cartSes: any = sessionStorage.getItem("cartSession");
   arrCart = JSON.parse(this.cartSes)
   addToCart(shoe: Shoe): void {
-    window.alert("Your product has been added to the cart!")
+    // window.alert("Your product has been added to the cart!")
     this.cart.addToCart(shoe);
   }
 

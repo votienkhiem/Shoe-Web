@@ -19,9 +19,10 @@
                 <th scope="col"><span>Size</span></th>
                 <th scope="col"><span>Quantity</span></th>
                 <th scope="col"><span>Provisional</span></th>
+                <th scope="col"></th>
               </tr>
             </thead>
-            <tbody *ngFor="let item of items">
+            <tbody *ngFor="let item of items; index as i">
               <tr>
                 <th scope="row"><img src="{{ item.image }}" alt="" /></th>
                 <td>
@@ -64,6 +65,11 @@
                 </td>
                 <td>
                   <span>{{ item.price * item.quantity }}$</span>
+                </td>
+                <td class="delete">
+                  <button (click)="deleteProduct(i)">
+                    <fa-icon [icon]="faTrash"></fa-icon>
+                  </button>
                 </td>
               </tr>
             </tbody>

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { Shoe } from 'src/shoe';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart',
@@ -8,6 +9,7 @@ import { Shoe } from 'src/shoe';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
+  faTrash = faTrash;
   items = this.cart.getShoes();
   // numCart: number | undefined = 0;
   constructor(private cart: CartService) { }
@@ -28,5 +30,8 @@ export class CartComponent {
     let totalQuantity: number = 0;
     this.items.forEach(item => totalQuantity = item.quantity--);
     return totalQuantity
+  }
+  deleteProduct(index: number): void {
+    this.items.splice(index, 1)
   }
 }

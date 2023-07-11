@@ -34,6 +34,12 @@
   font-weight: bold;
 }
 
+.cart-table .table tbody .delete button {
+  color: red;
+  border: none;
+  background-color: #fff;
+}
+
 .cart-table .table .form-select {
   padding: 0;
 }

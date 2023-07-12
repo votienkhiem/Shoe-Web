@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './Main/page/product-details/product-det
 import { CartComponent } from './Main/page/cart/cart.component';
 import { CarouselComponent } from './Main/page/carousel/carousel.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './Main/page/search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     ProductDetailsComponent,
     CartComponent,
-    CarouselComponent
+    CarouselComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

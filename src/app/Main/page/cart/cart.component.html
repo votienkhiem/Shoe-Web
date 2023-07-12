@@ -5,11 +5,11 @@
   <div class="row Cart">
     <div class="col-xl-12">
       <div class="your-cart">
-        <span>Your Cart</span>
         <div class="none-product" *ngIf="items.length === 0">
-          <span>Your cart is empty!!!!</span>
+          <img src="assets/images/cartempty.png" alt="" />
         </div>
         <div class="cart-table" *ngIf="items.length > 0">
+          <span class="your">Your Cart</span>
           <table class="table">
             <thead>
               <tr>

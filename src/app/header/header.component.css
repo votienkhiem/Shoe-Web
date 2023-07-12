@@ -53,10 +53,68 @@ div {
 
 }
 
-.user:hover,
+
 .cart:hover,
 .search:hover {
   color: #FF3066;
+}
+
+.user fa-icon:hover {
+  color: #FF3066;
+}
+
+.user .account {
+  background-color: white;
+  position: absolute;
+  width: 160px;
+  height: 150px;
+  top: 120px;
+  right: 35px;
+  z-index: 1;
+  box-shadow: 0 6px 10px;
+  visibility: hidden;
+  opacity: 0.6;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+
+.user:hover .account {
+  visibility: visible;
+  top: 85px;
+  opacity: 1;
+}
+
+.user .account ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+
+.user .account ul li {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user .account ul li span:hover {
+  color: #FF3066;
+}
+
+.user .account ul li button {
+  width: 140px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.user .account ul li .facebook {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+.user .account ul li .google {
+  background-color: rgba(255, 0, 0, 0.7);
 }
 
 .cart {

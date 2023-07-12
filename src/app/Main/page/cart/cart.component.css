@@ -8,10 +8,10 @@
   margin-bottom: 30px;
 }
 
-.your-cart span {
+.your-cart .cart-table .your {
   font-weight: bold;
   font-size: 30px;
-  text-align: left;
+  float: left;
   padding-left: 10px;
 }
 

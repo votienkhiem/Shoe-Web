@@ -168,39 +168,45 @@
             <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
 
-              <!-- <label for="size">ADD TO CART</label> -->
-              <!-- <input type="checkbox" id="size" /> -->
-              <!-- <input type="checkbox" name="" id="size" value="choose size" /> -->
-
-              <div class="showSize">
-                <span>Size</span>
-                <select name="size" id="">
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
-                  <option value="45">45</option>
-                </select>
-                <button type="submit" class="" (click)="addToCart(shoe)">
-                  ADD TO CART
-                </button>
+              <div class="showSize" id="{{ i }}">
+                <div class="size">
+                  <div class="size-btn-close">
+                    <button (click)="closeShow(i)">
+                      <fa-icon [icon]="faXmark"></fa-icon>
+                    </button>
+                  </div>
+                  <span>Size</span>
+                  <select name="size" id="">
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                  </select>
+                  <div class="size-btn-addCart">
+                    <button type="submit" class="" (click)="addToCart(shoe)">
+                      ADD TO CART
+                    </button>
+                  </div>
+                </div>
               </div>
-              <!-- <button
+              <button
                 type="submit"
                 class="btn-submit-cart"
-                (click)="onSelected(shoe)"
+                *ngIf="approve"
+                (click)="onShow(i)"
               >
                 ADD TO CART
-              </button> -->
-              <button
+              </button>
+              <!-- <button
                 type="submit"
                 class="btn-submit-cart"
                 (click)="addToCart(shoe)"
               >
                 ADD TO CART
-              </button>
+              </button> -->
             </div>
             <div class="shoe-name">
               <h3>

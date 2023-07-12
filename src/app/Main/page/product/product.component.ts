@@ -4,6 +4,8 @@ import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from 'src/app/service/data.service';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product',
@@ -13,6 +15,9 @@ import { DataService } from 'src/app/service/data.service';
 export class ProductComponent {
   shoes: Shoe[] = [];
   faCaretDown = faCaretDown;
+  faXmark = faXmark;
+  faMinus = faMinus;
+  public approve: boolean = true
 
 
   constructor(
@@ -38,12 +43,19 @@ export class ProductComponent {
       quantity: this.cart.getCartTotalQuantity()
     })
   }
-  selectedShoe?: Shoe;
-  onSelected(shoe: Shoe): void {
-    // this.selectedShoe = shoe
-    let a = this.selectedShoe?.id
-    if (a = shoe.id) {
+  onShow(i: any): void {
+    const show = document.getElementById(i);
 
+    if (show != null) {
+      show.style.display = 'block';
+      this.approve = !this.approve;
+    }
+  }
+  closeShow(i: any): void {
+    const show = document.getElementById(i);
+    if (show != null) {
+      show.style.display = 'none';
+      this.approve = !this.approve;
 
     }
   }

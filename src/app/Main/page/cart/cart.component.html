@@ -33,8 +33,8 @@
                 </td>
                 <td>
                   <select name="size" id="" class="select-size">
-                    <option value="" *ngFor="let a of item.size; index as i">
-                      {{ a }}
+                    <option value="" *ngFor="let item of item.size; index as i">
+                      {{ item }}
                     </option>
                   </select>
                 </td>
@@ -52,7 +52,8 @@
                       type="number"
                       name="number"
                       min="0"
-                      value="1"
+                      [value]="item.quantity"
+                      (change)="updateQuantity(i, $event)"
                     />
                     <!-- <input
                       type="button"

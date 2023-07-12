@@ -5,6 +5,8 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { Shoe } from 'src/shoe';
 import { CartService } from '../service/cart.service';
+import { DataService } from '../service/data.service';
+
 
 @Component({
   selector: 'app-header',
@@ -19,7 +21,15 @@ export class HeaderComponent {
   faAngleRight = faAngleRight;
   cartSes: any = sessionStorage.getItem("cartSession");
   arrCart = JSON.parse(this.cartSes)?.length
-  constructor(private cart: CartService) { }
+  // quantity cart
+  totalQuantity: number = 0;
+  constructor(
+    private cart: CartService,
+    private data: DataService
+  ) { }
   ngOnInit(): void {
+    this.data.getData.subscribe((res: any) => {
+      this.totalQuantity = res.quantity
+    })
   }
 }

@@ -16,6 +16,7 @@ export class ProductDetailsComponent {
   shoes: Shoe | undefined
   faPlus = faPlus;
   faMinus = faMinus;
+  selected: string = 'Select a Size';
 
   constructor(
     private route: ActivatedRoute,

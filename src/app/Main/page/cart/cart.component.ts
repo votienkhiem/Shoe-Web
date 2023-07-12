@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { Shoe } from 'src/shoe';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,10 +13,11 @@ export class CartComponent {
   faTrash = faTrash;
   items = this.cart.getShoes();
   // numCart: number | undefined = 0;
-  constructor(private cart: CartService) { }
-  // ngOnInit(): void {
-  //   this.numCart = this.items.length;
-  // }
+  constructor(
+    private cart: CartService, private data: DataService) { }
+  ngOnInit(): void {
+    this.data.changeData({ quantity: this.cart.getCartTotalQuantity() })
+  }
   total(): number {
     let totals: number = 0;
     this.items.forEach(item => totals += item.price * item.quantity);
@@ -33,5 +35,13 @@ export class CartComponent {
   }
   deleteProduct(index: number): void {
     this.items.splice(index, 1)
+    this.data.changeData({
+      quantity: this.cart.getCartTotalQuantity()
+    })
+  }
+  updateQuantity(index: number, e: any) {
+    this.data.changeData({
+      quantity: this.cart.getCartTotalQuantity()
+    })
   }
 }

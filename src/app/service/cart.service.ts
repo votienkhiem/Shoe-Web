@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Shoe } from 'src/shoe';
 
 @Injectable({
@@ -16,11 +17,20 @@ export class CartService {
     else {
 
       this.shoes.push(shoe);
+
     }
     // save cart on sessionStorage
     sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
   }
   getShoes() {
     return this.shoes
+  }
+  getCartTotalQuantity() {
+    let carts: any = this.getShoes();
+    let total: number = 0;
+    carts.forEach((item: any) => {
+      total += item.quantity
+    });
+    return total;
   }
 }

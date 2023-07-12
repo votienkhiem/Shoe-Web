@@ -21,15 +21,7 @@
   color: #30d9ff;
 }
 
-.container-list-shoe .showSize {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: #30ff52;
-  width: 240px;
-  height: 200px;
-  top: 0;
-}
+
 
 .product-shoe {
   width: 250px;
@@ -55,6 +47,7 @@
   opacity: 1;
 }
 
+
 .row {
   justify-content: center;
 }
@@ -77,6 +70,32 @@
 
 .btn-addToCart {
   position: relative;
+}
+
+.container-list-shoe .showSize {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #30ff52;
+  width: 240px;
+  height: 200px;
+  top: 0;
+  visibility: hidden;
+}
+
+.btn-addToCart input {
+  width: 50px;
+  height: 50px;
+  /* display: none; */
+
+}
+
+/*
+.btn-addToCart [id^=size]:checked+.showSize {
+  visibility: visible;
+} */
+.btn-addToCart input:checked+.showSize {
+  visibility: visible;
 }
 
 .btn-addToCart .btn-submit-cart {

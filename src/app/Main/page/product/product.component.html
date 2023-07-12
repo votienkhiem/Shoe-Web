@@ -162,24 +162,35 @@
 
         <div
           class="col-xl-4 col-md-6 col-sm-12 product-shoe"
-          *ngFor="let shoe of shoes"
+          *ngFor="let shoe of shoes; index as i"
         >
           <div class="container-list-shoe">
             <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
 
-              <div class="showSize" *ngIf="isShow">
+              <!-- <label for="size">ADD TO CART</label> -->
+              <!-- <input type="checkbox" id="size" /> -->
+              <!-- <input type="checkbox" name="" id="size" value="choose size" /> -->
+
+              <div class="showSize">
                 <span>Size</span>
                 <select name="size" id="">
                   <option value="39">39</option>
                   <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
                 </select>
+                <button type="submit" class="" (click)="addToCart(shoe)">
+                  ADD TO CART
+                </button>
               </div>
               <!-- <button
                 type="submit"
                 class="btn-submit-cart"
-                (click)="isShow = true"
-                *ngIf="!isShow"
+                (click)="onSelected(shoe)"
               >
                 ADD TO CART
               </button> -->

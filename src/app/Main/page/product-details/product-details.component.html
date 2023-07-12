@@ -99,21 +99,17 @@
             <span>Size</span>
             <div class="sizes">
               <div class="form-group">
-                <select class="form-select" name="select-size" id="">
-                  <option selected>Select one</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
-                  <option value="45">45</option>
-                  <option value="46">46</option>
-                  <option value="47">47</option>
-                  <option value="48">48</option>
-                  <option value="49">49</option>
-                  <option value="50">50</option>
+                <select
+                  class="form-select"
+                  name="select-size"
+                  id=""
+                  [(ngModel)]="selected"
+                >
+                  <option *ngFor="let item of shoes.size">
+                    {{ item }}
+                  </option>
                 </select>
+                {{ selected }}
               </div>
             </div>
           </div>

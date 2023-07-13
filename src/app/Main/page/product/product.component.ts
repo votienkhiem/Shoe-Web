@@ -6,6 +6,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from 'src/app/service/data.service';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-product',
@@ -17,8 +18,12 @@ export class ProductComponent {
   faCaretDown = faCaretDown;
   faXmark = faXmark;
   faMinus = faMinus;
-  public approve: boolean = true
+  public approve: boolean = true;
+  public selected: string = '';
 
+  submitSize: FormGroup = new FormGroup({
+    size: new FormControl(null, Validators.required)
+  })
 
   constructor(
     private shoeService: ShoeingService,
@@ -29,14 +34,27 @@ export class ProductComponent {
       this.shoes = arrShoes
     });
   }
-  cartSes: any = sessionStorage.getItem("cartSession");
-  arrCart = JSON.parse(this.cartSes)
-  addToCart(shoe: Shoe): void {
+
+
+  // addToCart(shoe: Shoe): void {
+  //   // window.alert("Your product has been added to the cart!")
+  //   if (this.submitSize.valid) {
+  //     this.cart.addToCart(shoe);
+  //     this.data.changeData({
+  //       quantity: this.cart.getCartTotalQuantity()
+  //     })
+  //   }
+  // }
+  addToCart(shoe: Shoe, selS: any): void {
     // window.alert("Your product has been added to the cart!")
-    this.cart.addToCart(shoe);
-    this.data.changeData({
-      quantity: this.cart.getCartTotalQuantity()
-    })
+    if (this.submitSize.valid) {
+      this.cart.addToCart(shoe, selS);
+      this.data.changeData({
+        quantity: this.cart.getCartTotalQuantity()
+      })
+      console.log(shoe)
+      console.log(selS)
+    }
   }
   ngOnInit() {
     this.data.changeData({

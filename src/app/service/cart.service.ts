@@ -7,16 +7,31 @@ import { Shoe } from 'src/shoe';
 })
 export class CartService {
   shoes: Shoe[] = [];
+  selectedSize: any = [];
 
   constructor() { }
-  addToCart(shoe: Shoe) {
+  // addToCart(shoe: Shoe) {
+  //   var index = this.shoes.findIndex(item => item.id === shoe.id)
+  //   if (index >= 0) {
+  //     this.shoes[index].quantity++;
+  //   }
+  //   else {
+
+  //     this.shoes.push(shoe);
+
+  //   }
+  //   // save cart on sessionStorage
+  //   sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
+  // }
+  addToCart(shoe: Shoe, selectedSize: any) {
     var index = this.shoes.findIndex(item => item.id === shoe.id)
     if (index >= 0) {
       this.shoes[index].quantity++;
     }
     else {
-
       this.shoes.push(shoe);
+      this.selectedSize.push(selectedSize);
+      // console.log('arr size', this.selectedSize.push(selectedSize))
 
     }
     // save cart on sessionStorage
@@ -24,6 +39,9 @@ export class CartService {
   }
   getShoes() {
     return this.shoes
+  }
+  getSizes() {
+    return this.selectedSize
   }
   getCartTotalQuantity() {
     let carts: any = this.getShoes();

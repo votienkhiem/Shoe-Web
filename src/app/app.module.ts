@@ -13,6 +13,7 @@ import { CartComponent } from './Main/page/cart/cart.component';
 import { CarouselComponent } from './Main/page/carousel/carousel.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './Main/page/search/search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchComponent } from './Main/page/search/search.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

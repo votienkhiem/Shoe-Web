@@ -30,7 +30,7 @@ export class ProductDetailsComponent {
     })
   }
   addToCart(shoe: Shoe) {
-    this.cart.addToCart(shoe);
+    // this.cart.addToCart(shoe);
     window.alert("Your product has been added to the cart!")
     console.log(shoe)
   }

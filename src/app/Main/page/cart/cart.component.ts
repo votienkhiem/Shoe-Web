@@ -12,7 +12,9 @@ import { DataService } from 'src/app/service/data.service';
 export class CartComponent {
   faTrash = faTrash;
   items = this.cart.getShoes();
+  sizes = this.cart.getSizes();
   // numCart: number | undefined = 0;
+
   constructor(
     private cart: CartService, private data: DataService) { }
   ngOnInit(): void {
@@ -43,5 +45,6 @@ export class CartComponent {
     this.data.changeData({
       quantity: this.cart.getCartTotalQuantity()
     })
+    console.log('size', this.sizes)
   }
 }

@@ -86,10 +86,10 @@
   width: 240px;
   height: 240px;
   align-items: center;
-  opacity: 0.9;
-
+  /* opacity: 0.9; */
 
 }
+
 
 .container-list-shoe .showSize .size select {
 
@@ -126,6 +126,10 @@
   color: #fff;
   margin-top: 50px;
   font-weight: bold;
+}
+
+button.changeColor {
+  background-color: orange;
 }
 
 .container-list-shoe .showSize .size .size-btn-addCart button:active {

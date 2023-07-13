@@ -96,8 +96,10 @@
     <div class="icon search">
       <fa-icon [icon]="faSearch" title="Search"></fa-icon>
       <div class="input-search">
-        <input type="text" class="input" placeholder="Search" />
-        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        <input type="text" class="input" placeholder="Search" #filter />
+        <button type="submit">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
       </div>
     </div>
     <div class="icon user">
@@ -119,5 +121,4 @@
     </div>
   </div>
 </div>
-
 <router-outlet></router-outlet>

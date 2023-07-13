@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CartService } from 'src/app/service/cart.service';
+import { DataService } from 'src/app/service/data.service';
+import { ShoeingService } from 'src/app/service/shoeing.service';
+import { Shoe } from 'src/shoe';
 
 @Component({
   selector: 'app-search',
@@ -6,5 +10,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+  shoes: Shoe[] = [];
+  listEmpty: Array<any> = [];
 
+  @Input() textSearch: string | undefined;
+
+
+  constructor(
+    private shoeService: ShoeingService,
+    private cart: CartService,
+    private data: DataService
+  ) {
+    this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+      this.shoes = arrShoes
+    });
+  }
+
+  // public searchItems(text: string) {
+  //   if (!text) {
+  //     this.shoes = this.listEmpty;
+  //   }
+  //   this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()))
+  // }
 }

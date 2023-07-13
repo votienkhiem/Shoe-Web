@@ -7,6 +7,7 @@ import { HomeComponent } from './Main/page/home/home.component';
 import { ProductComponent } from './Main/page/product/product.component';
 import { ProductDetailsComponent } from './Main/page/product-details/product-details.component';
 import { CartComponent } from './Main/page/cart/cart.component';
+import { SearchComponent } from './Main/page/search/search.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'search', component: SearchComponent },
   { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },

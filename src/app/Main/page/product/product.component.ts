@@ -15,6 +15,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductComponent {
   shoes: Shoe[] = [];
+  listEmpty: Array<any> = [];
   faCaretDown = faCaretDown;
   faXmark = faXmark;
   faMinus = faMinus;
@@ -34,8 +35,6 @@ export class ProductComponent {
       this.shoes = arrShoes
     });
   }
-
-
   // addToCart(shoe: Shoe): void {
   //   // window.alert("Your product has been added to the cart!")
   //   if (this.submitSize.valid) {
@@ -77,5 +76,20 @@ export class ProductComponent {
 
     }
   }
+  searchText: string = ''
+  onSearch(event: any) {
+    this.searchText = event;
+    console.log("123313", this.searchText = event)
+    //   if (!text) {
+    //     this.shoes = this.listEmpty;
+    //   }
+    //   this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()))
 
+    // if (this.searchText = event) {
+    //   this.shoes = this.listEmpty;
+    // }
+    // this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes((this.searchText = event).toLowerCase()))
+
+    // console.log('mang search', this.listEmpty)
+  }
 }

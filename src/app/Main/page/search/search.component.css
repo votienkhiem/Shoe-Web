@@ -1,0 +1,9 @@
+.search {
+  display: flex;
+}
+
+.searchProduct {
+  background-color: #9bc103;
+  width: 500px;
+  height: 500px;
+}

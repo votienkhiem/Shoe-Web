@@ -11,6 +11,7 @@
     <p *ngIf="shoe.description">Description: {{ shoe.description }}</p>
   </div>
 </div> -->
+<app-search (searchTextChanged)="onSearch($event)"></app-search>
 
 <div class="container text-center">
   <div class="row">
@@ -164,7 +165,13 @@
           class="col-xl-4 col-md-6 col-sm-12 product-shoe"
           *ngFor="let shoe of shoes; index as i"
         >
-          <div class="container-list-shoe">
+          <div
+            class="container-list-shoe"
+            *ngIf="
+              searchText === '' ||
+              shoe.name.toLowerCase().includes(searchText.toLowerCase())
+            "
+          >
             <div class="btn-addToCart">
               <img src="{{ shoe.image }}" alt="" class="img-shoe" />
 

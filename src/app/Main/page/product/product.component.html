@@ -163,7 +163,11 @@
 
         <div
           class="col-xl-4 col-md-6 col-sm-12 product-shoe"
-          *ngFor="let shoe of shoes; index as i"
+          *ngFor="
+            let shoe of shoes
+              | paginate : { itemsPerPage: 8, currentPage: page };
+            index as i
+          "
         >
           <div
             class="container-list-shoe"
@@ -270,6 +274,7 @@
               </p> -->
           </div>
         </div>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
       </div>
     </div>
   </div>

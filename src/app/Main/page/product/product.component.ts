@@ -21,6 +21,7 @@ export class ProductComponent {
   faMinus = faMinus;
   public approve: boolean = true;
   public selected: string = '';
+  public page: number = 1;
 
   submitSize: FormGroup = new FormGroup({
     size: new FormControl(null, Validators.required)

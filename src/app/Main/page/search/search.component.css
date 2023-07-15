@@ -5,5 +5,164 @@
 .searchProduct {
   background-color: #9bc103;
   width: 500px;
-  height: 500px;
+  /* height: 500px; */
+}
+
+
+.product-shoe {
+  width: 250px;
+  height: 340px;
+  /* background-color: rgb(215, 214, 214); */
+  text-align: center;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 10px 10px;
+
+}
+
+.img-shoe {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px 10px;
+}
+
+.container-list-shoe:hover .btn-addToCart .btn-submit-cart {
+  visibility: visible;
+  bottom: 0;
+  opacity: 1;
+}
+
+
+.row {
+  justify-content: center;
+}
+
+
+/* Category */
+.category-product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-shoe {
+  width: 100%;
+}
+
+.container-list-shoe h6 {
+  color: #FF3066;
+}
+
+.btn-addToCart {
+  position: relative;
+}
+
+.container-list-shoe .showSize {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.container-list-shoe .showSize .size {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 240px;
+  height: 240px;
+  align-items: center;
+  /* opacity: 0.9; */
+
+}
+
+
+.container-list-shoe .showSize .size select {
+
+  width: 170px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.container-list-shoe .showSize .size .size-btn-close {
+  width: inherit;
+}
+
+.container-list-shoe .showSize .size .size-btn-close button {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.container-list-shoe .showSize .size .size-btn-addCart button {
+  width: 170px;
+  height: 40px;
+  background-color: #FF3066;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+button.changeColor {
+  background-color: orange;
+}
+
+.container-list-shoe .showSize .size .size-btn-addCart button:active {
+  opacity: 0.7;
+}
+
+
+.container-list-shoe .showSize .size span {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.btn-addToCart input {
+  width: 50px;
+  height: 50px;
+
+
+}
+
+.btn-addToCart .btn-submit-cart {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s;
+  transition-delay: 0.1s;
+}
+
+.btn-submit-cart:hover {
+  color: #FF3066;
+  background-color: white;
+  border: solid 1px #FF3066;
+}
+
+.btn-submit-cart:active {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.btn-submit-cart {
+  width: 240px;
+  height: 40px;
+  font-weight: bold;
+  background-color: #FF3066;
+  border: none;
+  color: white;
+  visibility: hidden;
+  transition-delay: 0.1s;
 }

@@ -4,6 +4,8 @@ import { DataService } from 'src/app/service/data.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -37,4 +39,39 @@ export class SearchComponent {
   onSearch(): void {
     this.searchTextChanged.emit(this.enterSearchValue)
   }
+  // get from product
+  public selected: string = '';
+  faXmark = faXmark;
+  submitSize: FormGroup = new FormGroup({
+    size: new FormControl(null, Validators.required)
+  })
+  public approve: boolean = true;
+  onShow(i: any): void {
+    const show = document.getElementById(i);
+
+    if (show != null) {
+      show.style.display = 'block';
+      this.approve = !this.approve;
+    }
+  }
+  closeShow(i: any): void {
+    const show = document.getElementById(i);
+    if (show != null) {
+      show.style.display = 'none';
+      this.approve = !this.approve;
+
+    }
+  }
+  addToCart(shoe: Shoe, selS: any): void {
+    // window.alert("Your product has been added to the cart!")
+    if (this.submitSize.valid) {
+      this.cart.addToCart(shoe, selS);
+      this.data.changeData({
+        quantity: this.cart.getCartTotalQuantity()
+      })
+      console.log(shoe)
+      console.log(selS)
+    }
+  }
+  // end get from product
 }

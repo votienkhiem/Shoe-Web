@@ -32,8 +32,108 @@
       </div>
     </div>
     <div class="col-xl-12" *ngIf="listEmpty.length > 0">
-      <div class="searchResult" *ngFor="let item of listEmpty; index as i">
-        <span>{{ item.name }}</span>
+      <div class="searchResult" *ngFor="let shoe of listEmpty; index as i">
+        <span>{{ shoe.name }}</span>
+      </div>
+      <div *ngFor="let shoe of listEmpty; index as i">
+        <div class="container-list-shoe">
+          <div class="btn-addToCart">
+            <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+
+            <div class="showSize" id="{{ i }}">
+              <div class="size">
+                <div class="size-btn-close">
+                  <button (click)="closeShow(i)">
+                    <fa-icon [icon]="faXmark"></fa-icon>
+                  </button>
+                </div>
+                <span>Size</span>
+                <form action="" method="POST" [formGroup]="submitSize">
+                  <div class="form-group">
+                    <select
+                      name="size"
+                      id="size"
+                      formControlName="size"
+                      [(ngModel)]="selected"
+                    >
+                      <option value="">Select a size</option>
+                      <option *ngFor="let item of shoe.size">
+                        {{ item }}
+                      </option>
+                    </select>
+                    <div
+                      *ngIf="
+                        submitSize['controls']['size'].dirty &&
+                        submitSize['controls']['size'].errors
+                      "
+                    >
+                      <small
+                        *ngIf="
+                          submitSize['controls']['size'].errors['required']
+                        "
+                        >Choose a size</small
+                      >
+                    </div>
+                  </div>
+                  <div class="size-btn-addCart">
+                    <button
+                      type="submit"
+                      class="changeColor"
+                      (click)="addToCart(shoe, selected)"
+                      [disabled]="submitSize.invalid"
+                    >
+                      ADD TO CART
+                    </button>
+                  </div>
+                </form>
+                <!-- <select name="size" id="">
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                  </select>
+                  <div class="size-btn-addCart">
+                    <button type="submit" class="" (click)="addToCart(shoe)">
+                      ADD TO CART
+                    </button>
+                  </div> -->
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn-submit-cart"
+              *ngIf="approve"
+              (click)="onShow(i)"
+            >
+              ADD TO CART
+            </button>
+            <!-- <button
+                type="submit"
+                class="btn-submit-cart"
+                (click)="addToCart(shoe)"
+              >
+                ADD TO CART
+              </button> -->
+          </div>
+          <div class="shoe-name">
+            <h3>
+              <a
+                [title]="shoe.name + ' details'"
+                [routerLink]="['/products', shoe.id]"
+                >{{ shoe.name }}</a
+              >
+            </h3>
+          </div>
+          <div>
+            <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
+          </div>
+          <!-- <p *ngIf="shoe.description">
+                Description: {{ shoe.description }}
+              </p> -->
+        </div>
       </div>
     </div>
   </div>

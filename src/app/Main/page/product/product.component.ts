@@ -50,15 +50,15 @@ export class ProductComponent {
     if (this.submitSize.valid) {
       this.cart.addToCart(shoe, selS);
       this.data.changeData({
-        quantity: this.cart.getCartTotalQuantity()
+        quantity: this.cart.getCartTotalQuantity(),
       })
-      console.log(shoe)
-      console.log(selS)
+      console.log("giay", shoe)
+      console.log("size i day", selS)
     }
   }
   ngOnInit() {
     this.data.changeData({
-      quantity: this.cart.getCartTotalQuantity()
+      quantity: this.cart.getCartTotalQuantity(),
     })
   }
   onShow(i: any): void {

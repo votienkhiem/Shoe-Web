@@ -26,7 +26,7 @@
               <tr>
                 <th scope="row"><img src="{{ item.image }}" alt="" /></th>
                 <td>
-                  <span>{{ item.name }}+{{ sizes }}</span>
+                  <span>{{ item.name }}</span>
                 </td>
                 <td>
                   <span>{{ item.price }}$</span>
@@ -34,7 +34,7 @@
                 <td>
                   <select name="size" id="" class="select-size">
                     <option value="" *ngFor="let item of item.size; index as i">
-                      {{ item }}
+                      {{ item.size }}
                     </option>
                   </select>
                 </td>

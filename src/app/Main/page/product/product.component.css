@@ -30,7 +30,7 @@
   text-align: center;
   display: inline-block;
   border-radius: 10px;
-  margin: 10px 10px;
+  margin: 0 0 10px 0;
 
 }
 
@@ -190,6 +190,13 @@ button.changeColor {
   justify-content: space-between;
   padding-top: 20px;
   align-items: center;
+}
+
+.allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .name-AllShoe {

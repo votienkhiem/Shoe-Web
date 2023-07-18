@@ -16,6 +16,7 @@ import { SearchComponent } from './Main/page/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PaymentComponent } from './Main/page/payment/payment.component';
+import { AdminComponent } from './Main/page/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PaymentComponent } from './Main/page/payment/payment.component';
     CartComponent,
     CarouselComponent,
     SearchComponent,
-    PaymentComponent
+    PaymentComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

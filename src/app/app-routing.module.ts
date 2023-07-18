@@ -9,16 +9,16 @@ import { ProductDetailsComponent } from './Main/page/product-details/product-det
 import { CartComponent } from './Main/page/cart/cart.component';
 import { SearchComponent } from './Main/page/search/search.component';
 import { PaymentComponent } from './Main/page/payment/payment.component';
+import { AdminComponent } from './Main/page/admin/admin.component';
 
 
 
 const routes: Routes = [
-  { path: 'header', component: HeaderComponent },
-  { path: 'footer', component: FooterComponent },
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
   { path: 'cart', component: CartComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'admin', component: AdminComponent },
   { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: 'payment', component: PaymentComponent },
   { path: '', component: HomeComponent },

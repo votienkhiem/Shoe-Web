@@ -93,4 +93,37 @@ export class ProductComponent {
 
     // console.log('mang search', this.listEmpty)
   }
+
+  selectedSort: string = ''
+  public sortName: Array<any> = [];
+  sortAZ(): void {
+    switch (this.selectedSort) {
+      case "1": {
+
+        this.shoes.sort((s1, s2) => {
+          return s1.name > s2.name ? 1 : -1
+        })
+        break;
+      }
+      case "2": {
+        this.shoes.sort((s1, s2) => {
+          return s1.name > s2.name ? -1 : 1
+        })
+        break;
+      }
+      case "3": {
+        this.shoes.sort((p1, p2) => {
+          return p1.price > p2.price ? 1 : -1;
+        })
+        break;
+      }
+      case "4": {
+
+        this.shoes.sort((s1, s2) => {
+          return s1.price > s2.price ? -1 : 1
+        })
+        break;
+      }
+    }
+  }
 }

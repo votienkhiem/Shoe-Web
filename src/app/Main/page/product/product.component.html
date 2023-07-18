@@ -151,8 +151,12 @@
           </div>
           <div class="arrange-AllShoe">
             <label for="arrange">Arrange:</label>
-            <select class="form-select">
-              <option selected>Default</option>
+            <select
+              class="form-select"
+              [(ngModel)]="selectedSort"
+              (ngModelChange)="sortAZ()"
+            >
+              <option value="">Default</option>
               <option value="1">A → Z</option>
               <option value="2">Z → A</option>
               <option value="3">Price low to high</option>

@@ -1,141 +1,120 @@
-<p>search works!</p>
-
-<!-- <input type="text" placeholder="Search" #search [(ngModel)]="search" />
-<div class="search-icon"></div>
-
-<div>
-  <span>search dc</span>
-  <div *ngFor="let item of listEmpty">
-    <span>{{ item.name }}</span>
-  </div>
-</div> -->
-<div class="search">
-  <input
-    type="text"
-    class="input"
-    placeholder="What are you looking for?"
-    [(ngModel)]="enterSearchValue"
-    (input)="onSearch()"
-    #filter
-  />
-  <button type="submit" (click)="searchItems(filter.value)">
-    <fa-icon [icon]="faSearch"></fa-icon>
-  </button>
-</div>
-
-<!-- Search  -->
 <div class="container text-center">
-  <div class="row searchProduct">
-    <div class="col-xl-12" *ngIf="listEmpty.length === 0">
+  <div class="row">
+    <div class="col-xl-12 searchPage">
       <div>
-        <!-- <span>Oops. We couldn’t find anything that matches your search.</span> -->
+        <h1>SEARCH</h1>
       </div>
-    </div>
-    <div class="col-xl-12" *ngIf="listEmpty.length > 0">
-      <div class="searchResult" *ngFor="let shoe of listEmpty; index as i">
-        <span>{{ shoe.name }}</span>
+      <!-- input search -->
+      <div class="search">
+        <input
+          type="text"
+          class="inputSearch"
+          placeholder=" WHAT ARE YOU LOOKING FOR ?"
+          [(ngModel)]="enterSearchValue"
+          (input)="onSearch()"
+          (keydown.enter)="searchItems(filter.value)"
+          #filter
+        />
+        <button type="submit" (click)="searchItems(filter.value)">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
       </div>
-      <div *ngFor="let shoe of listEmpty; index as i">
-        <div class="container-list-shoe">
-          <div class="btn-addToCart">
-            <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+      <!-- end input search -->
+      <!-- Search  -->
+      <div class="container text-center">
+        <div class="row searchProduct">
+          <div class="col-xl-12" *ngIf="listEmpty.length === 0">
+            <div>
+              <!-- <span
+                >Oops. We couldn’t find anything that matches your search.</span
+              > -->
+            </div>
+          </div>
+          <div class="col-xl-12" *ngIf="listEmpty.length > 0">
+            <div class="searchResult">
+              <div *ngFor="let shoe of listEmpty; index as i">
+                <div class="container-list-shoe">
+                  <div class="btn-addToCart">
+                    <img src="{{ shoe.image }}" alt="" class="img-shoe" />
 
-            <div class="showSize" id="{{ i }}">
-              <div class="size">
-                <div class="size-btn-close">
-                  <button (click)="closeShow(i)">
-                    <fa-icon [icon]="faXmark"></fa-icon>
-                  </button>
-                </div>
-                <span>Size</span>
-                <form action="" method="POST" [formGroup]="submitSize">
-                  <div class="form-group">
-                    <select
-                      name="size"
-                      id="size"
-                      formControlName="size"
-                      [(ngModel)]="selected"
-                    >
-                      <option value="">Select a size</option>
-                      <option *ngFor="let item of shoe.size">
-                        {{ item }}
-                      </option>
-                    </select>
-                    <div
-                      *ngIf="
-                        submitSize['controls']['size'].dirty &&
-                        submitSize['controls']['size'].errors
-                      "
-                    >
-                      <small
-                        *ngIf="
-                          submitSize['controls']['size'].errors['required']
-                        "
-                        >Choose a size</small
-                      >
+                    <div class="showSize" id="{{ i }}">
+                      <div class="size">
+                        <div class="size-btn-close">
+                          <button (click)="closeShow(i)">
+                            <fa-icon [icon]="faXmark"></fa-icon>
+                          </button>
+                        </div>
+                        <span>Size</span>
+                        <form action="" method="POST" [formGroup]="submitSize">
+                          <div class="form-group">
+                            <select
+                              name="size"
+                              id="size"
+                              formControlName="size"
+                              [(ngModel)]="selected"
+                            >
+                              <option value="">Select a size</option>
+                              <option *ngFor="let item of shoe.size">
+                                {{ item }}
+                              </option>
+                            </select>
+                            <div
+                              *ngIf="
+                                submitSize['controls']['size'].dirty &&
+                                submitSize['controls']['size'].errors
+                              "
+                            >
+                              <small
+                                *ngIf="
+                                  submitSize['controls']['size'].errors[
+                                    'required'
+                                  ]
+                                "
+                                >Choose a size</small
+                              >
+                            </div>
+                          </div>
+                          <div class="size-btn-addCart">
+                            <button
+                              type="submit"
+                              class="changeColor"
+                              (click)="addToCart(shoe, selected)"
+                              [disabled]="submitSize.invalid"
+                            >
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
-                  </div>
-                  <div class="size-btn-addCart">
                     <button
                       type="submit"
-                      class="changeColor"
-                      (click)="addToCart(shoe, selected)"
-                      [disabled]="submitSize.invalid"
+                      class="btn-submit-cart"
+                      *ngIf="approve"
+                      (click)="onShow(i)"
                     >
                       ADD TO CART
                     </button>
                   </div>
-                </form>
-                <!-- <select name="size" id="">
-                    <option value="39">39</option>
-                    <option value="40">40</option>
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                    <option value="43">43</option>
-                    <option value="44">44</option>
-                    <option value="45">45</option>
-                  </select>
-                  <div class="size-btn-addCart">
-                    <button type="submit" class="" (click)="addToCart(shoe)">
-                      ADD TO CART
-                    </button>
-                  </div> -->
+                  <div class="shoe-name">
+                    <h3>
+                      <a
+                        [title]="shoe.name + ' details'"
+                        [routerLink]="['/products', shoe.id]"
+                        >{{ shoe.name }}</a
+                      >
+                    </h3>
+                  </div>
+                  <div>
+                    <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
+                  </div>
+                </div>
               </div>
             </div>
-            <button
-              type="submit"
-              class="btn-submit-cart"
-              *ngIf="approve"
-              (click)="onShow(i)"
-            >
-              ADD TO CART
-            </button>
-            <!-- <button
-                type="submit"
-                class="btn-submit-cart"
-                (click)="addToCart(shoe)"
-              >
-                ADD TO CART
-              </button> -->
           </div>
-          <div class="shoe-name">
-            <h3>
-              <a
-                [title]="shoe.name + ' details'"
-                [routerLink]="['/products', shoe.id]"
-                >{{ shoe.name }}</a
-              >
-            </h3>
-          </div>
-          <div>
-            <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
-          </div>
-          <!-- <p *ngIf="shoe.description">
-                Description: {{ shoe.description }}
-              </p> -->
         </div>
       </div>
+      <!-- End Search -->
     </div>
   </div>
 </div>
-<!-- End Search -->

@@ -29,18 +29,21 @@
                       *ngIf="
                         paymentF['controls']['firstName'].errors['required']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >Please enter a First Name.</small
                     >
                     <small
                       *ngIf="
                         paymentF['controls']['firstName'].errors['minlength']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >First Name at least 3 characters</small
                     >
                     <small
                       *ngIf="
                         paymentF['controls']['firstName'].errors['maxlength']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >First Name up to 10 characters</small
                     >
                   </div>
@@ -67,18 +70,21 @@
                       *ngIf="
                         paymentF['controls']['lastName'].errors['required']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >Please enter a Last Name.</small
                     >
                     <small
                       *ngIf="
                         paymentF['controls']['lastName'].errors['minlength']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >Last Name at least 3 characters</small
                     >
                     <small
                       *ngIf="
                         paymentF['controls']['lastName'].errors['maxlength']
                       "
+                      [ngClass]="{ error: paymentF['controls']['note'].errors }"
                       >Last Name up to 10 characters</small
                     >
                   </div>
@@ -100,10 +106,14 @@
                   paymentF['controls']['email'].errors
                 "
               >
-                <small *ngIf="paymentF['controls']['email'].errors['required']"
+                <small
+                  *ngIf="paymentF['controls']['email'].errors['required']"
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Please enter a Email!</small
                 >
-                <small *ngIf="paymentF['controls']['email'].errors['email']"
+                <small
+                  *ngIf="paymentF['controls']['email'].errors['email']"
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Invalid Email Format (demo@gmail.com)</small
                 >
               </div>
@@ -125,6 +135,7 @@
               >
                 <small
                   *ngIf="paymentF['controls']['address'].errors['required']"
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Please enter a Address!</small
                 >
               </div>
@@ -147,12 +158,14 @@
               >
                 <small
                   *ngIf="paymentF['controls']['phoneNumber'].errors['required']"
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Please enter a valid Phone Number</small
                 >
                 <small
                   *ngIf="
                     paymentF['controls']['phoneNumber'].errors['maxlength']
                   "
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Please enter a valid Phone Number</small
                 >
               </div>
@@ -173,7 +186,9 @@
                   paymentF['controls']['note'].errors
                 "
               >
-                <small *ngIf="paymentF['controls']['note'].errors['required']"
+                <small
+                  *ngIf="paymentF['controls']['note'].errors['required']"
+                  [ngClass]="{ error: paymentF['controls']['note'].errors }"
                   >Please enter a Note</small
                 >
               </div>
@@ -196,6 +211,13 @@
                 <img src="assets/images/checkout-border.jpg" alt="" />
                 <span>Your Order</span>
                 <div class="oder">
+                  <tr>
+                    <td><span>Products</span></td>
+                  </tr>
+                  <tr class="items">
+                    <td><span>sneaker</span></td>
+                    <td><span>3000$</span></td>
+                  </tr>
                   <tr>
                     <td colspan="2">Total</td>
                     <td>

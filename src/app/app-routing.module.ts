@@ -10,6 +10,7 @@ import { CartComponent } from './Main/page/cart/cart.component';
 import { SearchComponent } from './Main/page/search/search.component';
 import { PaymentComponent } from './Main/page/payment/payment.component';
 import { AdminComponent } from './Main/page/admin/admin.component';
+import { LoginComponent } from './Main/page/login/login.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'search', component: SearchComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: 'payment', component: PaymentComponent },
   { path: '', component: HomeComponent },

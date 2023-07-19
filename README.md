@@ -30,3 +30,4 @@ start json
 json-server --watch db.json
 /_ Mobile: width < 740px _/
 /_ Tablet: width >= 740px and width < 1024px _/
+json-server --watch account.json --port 3004

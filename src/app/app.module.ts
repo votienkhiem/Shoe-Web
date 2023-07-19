@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PaymentComponent } from './Main/page/payment/payment.component';
 import { AdminComponent } from './Main/page/admin/admin.component';
+import { LoginComponent } from './Main/page/login/login.component';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { AdminComponent } from './Main/page/admin/admin.component';
     CarouselComponent,
     SearchComponent,
     PaymentComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { AdminComponent } from './Main/page/admin/admin.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

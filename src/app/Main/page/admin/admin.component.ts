@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import { CrudService } from 'src/app/service/crud.service';
 import { DataService } from 'src/app/service/data.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
@@ -11,16 +12,20 @@ import { Shoe } from 'src/shoe';
 })
 export class AdminComponent {
   shoes: Shoe[] = [];
-  ngOnInnit(): void {
 
-  }
   constructor(
     private shoeService: ShoeingService,
     private cart: CartService,
-    private data: DataService
-  ) {
-    this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
-      this.shoes = arrShoes
-    });
+    private data: DataService,
+    private crud: CrudService
+  ) { }
+
+  ngOnInit(): void {
+    this.crud.getList().subscribe(res => {
+      this.shoes = res;
+    })
+  }
+  onEdit(id: number): void {
+    console.log("hien thi id", id)
   }
 }

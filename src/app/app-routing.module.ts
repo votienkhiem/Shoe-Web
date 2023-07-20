@@ -11,6 +11,8 @@ import { SearchComponent } from './Main/page/search/search.component';
 import { PaymentComponent } from './Main/page/payment/payment.component';
 import { AdminComponent } from './Main/page/admin/admin.component';
 import { LoginComponent } from './Main/page/login/login.component';
+import { ProductEditComponent } from './Main/page/admin/product/product-edit/product-edit.component';
+import { ProductAddComponent } from './Main/page/admin/product/product-add/product-add.component';
 
 
 
@@ -19,7 +21,13 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'cart', component: CartComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'admin', component: AdminComponent },
+  {
+    path: 'admin', children: [
+      { path: '', component: AdminComponent },
+      { path: 'edit', component: ProductEditComponent },
+      { path: 'add', component: ProductAddComponent },
+    ]
+  },
   { path: 'login', component: LoginComponent },
   { path: 'products/:shoeId', component: ProductDetailsComponent },
   { path: 'payment', component: PaymentComponent },

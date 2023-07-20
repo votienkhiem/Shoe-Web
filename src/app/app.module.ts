@@ -19,7 +19,8 @@ import { PaymentComponent } from './Main/page/payment/payment.component';
 import { AdminComponent } from './Main/page/admin/admin.component';
 import { LoginComponent } from './Main/page/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductAddComponent } from './Main/page/admin/product-add/product-add.component'
+import { ProductEditComponent } from './Main/page/admin/product/product-edit/product-edit.component'
+import { ProductAddComponent } from './Main/page/admin/product/product-add/product-add.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ProductAddComponent } from './Main/page/admin/product-add/product-add.c
     PaymentComponent,
     AdminComponent,
     LoginComponent,
+    ProductEditComponent,
     ProductAddComponent
   ],
   imports: [

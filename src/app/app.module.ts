@@ -18,7 +18,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PaymentComponent } from './Main/page/payment/payment.component';
 import { AdminComponent } from './Main/page/admin/admin.component';
 import { LoginComponent } from './Main/page/login/login.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ProductAddComponent } from './Main/page/admin/product-add/product-add.component'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http'
     SearchComponent,
     PaymentComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,

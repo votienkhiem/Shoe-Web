@@ -3,9 +3,9 @@
     <div class="col-xl-12 add">
       <h4>ADD NEW PRODUCTS</h4>
       <div class="form-addProduct">
-        <form action="" method="POST">
+        <form action="" method="POST" [formGroup]="addF">
           <!-- name -->
-          <div class="mb-3">
+          <div class="mb-3 form-group">
             <label for="exampleFormControlInput1" class="form-label"
               >Name</label
             >
@@ -14,7 +14,19 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="Enter a name"
+              formControlName="name"
             />
+          </div>
+          <div
+            *ngIf="
+              addF['controls']['name'].dirty && addF['controls']['name'].errors
+            "
+          >
+            <small
+              *ngIf="addF['controls']['name'].errors['required']"
+              [ngClass]="{ error: addF['controls']['name'].errors }"
+              >Please enter a name product</small
+            >
           </div>
           <!-- image -->
           <div class="mb-3">
@@ -26,6 +38,7 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="enter link image"
+              formControlName="image"
             />
           </div>
           <!-- price -->
@@ -34,11 +47,24 @@
               >Price</label
             >
             <input
-              type="text"
+              type="number"
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="Enter a price"
+              formControlName="price"
             />
+          </div>
+          <div
+            *ngIf="
+              addF['controls']['price'].dirty &&
+              addF['controls']['price'].errors
+            "
+          >
+            <small
+              *ngIf="addF['controls']['price'].errors['required']"
+              [ngClass]="{ error: addF['controls']['price'].errors }"
+              >Please enter a price product</small
+            >
           </div>
           <!-- description -->
 
@@ -50,6 +76,7 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              formControlName="description"
             ></textarea>
           </div>
           <!-- quantity -->
@@ -58,6 +85,7 @@
               >Quantity</label
             >
             <input
+              readonly
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
@@ -74,7 +102,20 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="Enter a brand"
+              formControlName="brand"
             />
+          </div>
+          <div
+            *ngIf="
+              addF['controls']['brand'].dirty &&
+              addF['controls']['brand'].errors
+            "
+          >
+            <small
+              *ngIf="addF['controls']['brand'].errors['required']"
+              [ngClass]="{ error: addF['controls']['brand'].errors }"
+              >Please enter a brand product</small
+            >
           </div>
           <!-- status -->
           <div class="status">
@@ -82,10 +123,11 @@
             <select
               class="form-select form-select-lg mb-3"
               aria-label=".form-select-lg example"
+              formControlName="status"
             >
-              <option selected>Status</option>
-              <option value="1">In stock</option>
-              <option value="2">Out of Stock</option>
+              <option>Status</option>
+              <option value="In stock">In stock</option>
+              <option value="Out of stock">Out of Stock</option>
             </select>
           </div>
           <!-- detail -->
@@ -97,6 +139,7 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              formControlName="detail"
             ></textarea>
           </div>
           <!-- history -->
@@ -108,6 +151,7 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              formControlName="history"
             ></textarea>
           </div>
           <!-- color -->
@@ -116,11 +160,12 @@
             <select
               class="form-select form-select-lg mb-3"
               aria-label=".form-select-lg example"
+              formControlName="color"
             >
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>Color</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+              <option value="Yellow">Yellow</option>
             </select>
           </div>
           <!-- size -->
@@ -130,15 +175,34 @@
                 >Size</label
               >
               <input
-                type="text"
+                type="number"
                 class="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Enter a size"
+                formControlName="size"
               />
             </div>
           </div>
+          <div
+            *ngIf="
+              addF['controls']['size'].dirty && addF['controls']['size'].errors
+            "
+          >
+            <small
+              *ngIf="addF['controls']['size'].errors['required']"
+              [ngClass]="{ error: addF['controls']['size'].errors }"
+              >Please enter a size product</small
+            >
+          </div>
         </form>
-        <button type="button" class="btn btn-success">Add</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          [disabled]="addF.invalid"
+          (click)="addSubmit()"
+        >
+          Add
+        </button>
       </div>
     </div>
   </div>

@@ -45,3 +45,7 @@ label {
 h4 {
   font-weight: bold;
 }
+
+.error {
+  color: red;
+}

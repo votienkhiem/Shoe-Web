@@ -1,0 +1,51 @@
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.add .form-addProduct {
+  width: 50%;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.add .form-addProduct button {
+  width: 200px;
+  margin-bottom: 10px;
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.add .form-addProduct form {
+  margin: 10px;
+}
+
+label {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.status span {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.color span {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}

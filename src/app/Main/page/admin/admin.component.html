@@ -1,7 +1,42 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-xl-12 admin">
-      <Span>admin handler right here!</Span>
+      <h4>ALL ITEMS</h4>
+      <div class="search-product">
+        <div class="search-item">
+          <label for="search">SEARCH</label>
+          <input type="text" name="search" id="" placeholder="Search product" />
+          <button type="button" class="btn btn-secondary">Search</button>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary">Add product</button>
+        </div>
+      </div>
+      <div class="CRUD-Product">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">NAME</th>
+              <th scope="col">PRICE</th>
+              <th scope="col">QUANTITY</th>
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Converse</td>
+              <td>200$</td>
+              <td>12</td>
+              <td>
+                <button type="button" class="btn btn-success">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

@@ -27,6 +27,7 @@ export class CarouselComponent {
       this.autoSlideImages();
     }
   }
+
   autoSlideImages(): void {
     setInterval(() => {
       this.onNextClick();

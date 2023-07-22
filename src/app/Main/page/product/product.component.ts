@@ -99,7 +99,6 @@ export class ProductComponent {
   sortAZ(): void {
     switch (this.selectedSort) {
       case "1": {
-
         this.shoes.sort((s1, s2) => {
           return s1.name > s2.name ? 1 : -1
         })

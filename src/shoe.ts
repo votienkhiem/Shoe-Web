@@ -12,3 +12,6 @@ export interface Shoe {
   size: any,
   color: string,
 }
+// export class shoe{
+//   id: number= 1
+// }

@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
-import { Shoe } from 'src/shoe';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from 'src/app/service/data.service';
 

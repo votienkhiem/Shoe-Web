@@ -1,38 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found.component';
-import { HomeComponent } from './Main/page/home/home.component';
-import { ProductComponent } from './Main/page/product/product.component';
-import { ProductDetailsComponent } from './Main/page/product-details/product-details.component';
-import { CartComponent } from './Main/page/cart/cart.component';
-import { SearchComponent } from './Main/page/search/search.component';
-import { PaymentComponent } from './Main/page/payment/payment.component';
-import { AdminComponent } from './Main/page/admin/admin.component';
-import { LoginComponent } from './Main/page/login/login.component';
-import { ProductEditComponent } from './Main/page/admin/product/product-edit/product-edit.component';
-import { ProductAddComponent } from './Main/page/admin/product/product-add/product-add.component';
+import { PreloadAllModules } from '@angular/router';
 
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'search', component: SearchComponent },
-  {
-    path: 'admin', children: [
-      { path: '', component: AdminComponent },
-      { path: 'edit', component: ProductEditComponent },
-      { path: 'add', component: ProductAddComponent },
-    ]
-  },
-  { path: 'login', component: LoginComponent },
-  { path: 'products/:shoeId', component: ProductDetailsComponent },
-  { path: 'payment', component: PaymentComponent },
-  { path: '', component: HomeComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { path: 'home', loadChildren: () => import('./Main/page/home/home.module').then(m => m.HomeModule) },
+  { path: 'product', loadChildren: () => import('./Main/page/product/product.module').then(m => m.ProductModule) },
+  { path: 'cart', loadChildren: () => import('./Main/page/cart/cart.module').then(m => m.CartModule) },
+  { path: 'search', loadChildren: () => import('./Main/page/search/search.module').then(m => m.SearchModule) },
+  { path: 'admin', loadChildren: () => import('./Main/page/admin/admin.module').then(m => m.AdminModule) },
+  { path: 'login', loadChildren: () => import('./Main/page/login/login.module').then(m => m.LoginModule) },
+  { path: 'products/:shoeId', loadChildren: () => import('./Main/page/product-details/product-details.module').then(m => m.ProductDetailsModule) },
+  { path: 'payment', loadChildren: () => import('./Main/page/payment/payment.module').then(m => m.PaymentModule) },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', loadChildren: () => import('./Main/page/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
 
 @NgModule({

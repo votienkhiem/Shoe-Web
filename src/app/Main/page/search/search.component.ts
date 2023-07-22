@@ -42,9 +42,11 @@ export class SearchComponent {
   // get from product
   public selected: string = '';
   faXmark = faXmark;
+
   submitSize: FormGroup = new FormGroup({
     size: new FormControl(null, Validators.required)
   })
+
   public approve: boolean = true;
   onShow(i: any): void {
     const show = document.getElementById(i);

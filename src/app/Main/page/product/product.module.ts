@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductComponent } from './product.component';
 import { ProductRoutingModule } from './product-routing.module';
+import { SearchComponent } from '../search/search.component';
 
 
 

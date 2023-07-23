@@ -1,18 +1,3 @@
-<!-- <div class="container-list-shoe">
-  <div *ngFor="let shoe of shoes" class="product-shoe">
-    <img src="{{ shoe.image }}" alt="" class="img-shoe" />
-    <h3>
-      <a
-        [title]="shoe.name + ' details'"
-        [routerLink]="['/products', shoe.id]"
-        >{{ shoe.name }}</a
-      >
-    </h3>
-    <p *ngIf="shoe.description">Description: {{ shoe.description }}</p>
-  </div>
-</div> -->
-<!-- <app-search (searchTextChanged)="onSearch($event)"></app-search> -->
-
 <div class="container text-center">
   <div class="row">
     <div class="col-xl-2">
@@ -157,10 +142,10 @@
               (ngModelChange)="sortAZ()"
             >
               <option value="">Default</option>
-              <option value="1">A → Z</option>
-              <option value="2">Z → A</option>
-              <option value="3">Price low to high</option>
-              <option value="4">Price high to low</option>
+              <option value="AtoZ">A → Z</option>
+              <option value="ZtoA">Z → A</option>
+              <option value="PriceLowToHigh">Price low to high</option>
+              <option value="PriceHighToLow">Price high to low</option>
             </select>
           </div>
         </div>
@@ -229,20 +214,6 @@
                         </button>
                       </div>
                     </form>
-                    <!-- <select name="size" id="">
-                    <option value="39">39</option>
-                    <option value="40">40</option>
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                    <option value="43">43</option>
-                    <option value="44">44</option>
-                    <option value="45">45</option>
-                  </select>
-                  <div class="size-btn-addCart">
-                    <button type="submit" class="" (click)="addToCart(shoe)">
-                      ADD TO CART
-                    </button>
-                  </div> -->
                   </div>
                 </div>
                 <button
@@ -253,13 +224,6 @@
                 >
                   ADD TO CART
                 </button>
-                <!-- <button
-                type="submit"
-                class="btn-submit-cart"
-                (click)="addToCart(shoe)"
-              >
-                ADD TO CART
-              </button> -->
               </div>
               <div class="shoe-name">
                 <h3>
@@ -273,9 +237,6 @@
               <div>
                 <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
               </div>
-              <!-- <p *ngIf="shoe.description">
-                Description: {{ shoe.description }}
-              </p> -->
             </div>
           </div>
         </div>

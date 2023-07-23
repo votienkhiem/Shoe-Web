@@ -12,7 +12,8 @@ import { LoginService } from 'src/app/service/login.service';
 export class LoginComponent {
   loginF: FormGroup = new FormGroup({
     userName: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+    password: new FormControl('', Validators.required),
+    rememberMe: new FormControl(false)
   })
   account: any;
   public user: string = 'admin';

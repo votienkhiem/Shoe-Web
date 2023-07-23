@@ -98,25 +98,25 @@ export class ProductComponent {
   public sortName: Array<any> = [];
   sortAZ(): void {
     switch (this.selectedSort) {
-      case "1": {
+      case "AtoZ": {
         this.shoes.sort((s1, s2) => {
           return s1.name > s2.name ? 1 : -1
         })
         break;
       }
-      case "2": {
+      case "ZtoA": {
         this.shoes.sort((s1, s2) => {
           return s1.name > s2.name ? -1 : 1
         })
         break;
       }
-      case "3": {
+      case "PriceLowToHigh": {
         this.shoes.sort((p1, p2) => {
           return p1.price > p2.price ? 1 : -1;
         })
         break;
       }
-      case "4": {
+      case "PriceHighToLow": {
 
         this.shoes.sort((s1, s2) => {
           return s1.price > s2.price ? -1 : 1

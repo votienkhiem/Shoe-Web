@@ -11,8 +11,7 @@ import { DataService } from 'src/app/service/data.service';
 export class CartComponent {
   faTrash = faTrash;
   items = this.cart.getShoes();
-  sizes = this.cart.getSizes();
-
+  selectedShoeASize = this.cart.getSelectedShoe();
 
 
   constructor(
@@ -20,6 +19,7 @@ export class CartComponent {
   ngOnInit(): void {
     this.data.changeData({ quantity: this.cart.getCartTotalQuantity() })
   }
+
   total(): number {
     let totals: number = 0;
     this.items.forEach(item => totals += item.price * item.quantity);

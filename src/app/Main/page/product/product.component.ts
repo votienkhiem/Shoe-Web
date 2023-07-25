@@ -22,6 +22,7 @@ export class ProductComponent {
   public approve: boolean = true;
   public selected: string = '';
   public page: number = 1;
+  selectedSort: string = ''
 
   submitSize: FormGroup = new FormGroup({
     size: new FormControl(null, Validators.required)
@@ -49,12 +50,8 @@ export class ProductComponent {
     // window.alert("Your product has been added to the cart!")
     if (this.submitSize.valid) {
       this.cart.addToCart(shoe, selS);
-      this.data.changeData({
-        quantity: this.cart.getCartTotalQuantity(),
-      })
-      console.log("giay", shoe)
-      console.log("size i day", selS)
     }
+
   }
   ngOnInit() {
     this.data.changeData({
@@ -94,8 +91,6 @@ export class ProductComponent {
     // console.log('mang search', this.listEmpty)
   }
 
-  selectedSort: string = ''
-  public sortName: Array<any> = [];
   sortAZ(): void {
     switch (this.selectedSort) {
       case "AtoZ": {

@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { faL } from '@fortawesome/free-solid-svg-icons';
-import { BehaviorSubject } from 'rxjs';
 import { Shoe } from 'src/shoe';
 
 @Injectable({
@@ -8,8 +6,9 @@ import { Shoe } from 'src/shoe';
 })
 export class CartService {
   shoes: Shoe[] = [];
-  selectedSize: any = [];
-  selectedShoe: any;
+  // selectedShoes: any = {};
+  selectedShoes: Array<any> = [];
+
 
   constructor() { }
   // addToCart(shoe: Shoe) {
@@ -25,33 +24,50 @@ export class CartService {
   //   // save cart on sessionStorage
   //   sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
   // }
-  addToCart(shoe: Shoe, size: any) {
-    let letShoe = this.selectedShoe[shoe.id];
-    if(letShoe){
-      
-    }
+  // addToCart(shoe: any, size: any) {
+  //   let shoesId = this.selectedShoes[shoe.id];
+  //   let shoeIdCurrent = shoe.id;
+  //   if (shoesId) {
+  //     let selectedSize = shoesId[size];
+  //     if (selectedSize) {
+  //       { shoesId[size] = shoesId[size] + 1 };
+  //     }
+  //     else {
+  //       shoesId[size] = 1;
+  //     }
+  //   }
+  //   else {
+  //     this.selectedShoes[shoeIdCurrent] = { [size]: 1 }
+  //     // this.selectedShoes[shoeIdCurrent] = { [size]: 1 }
+  //     // this.selectedShoes[shoeIdCurrent] = { "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price, "quantity": shoe.quantity }
+  //     // this.selectedShoes[shoeIdCurrent] = { [size]: 1, ["shoeSelected"]: { "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price } }
+  //     // this.selectedShoes[shoeIdCurrent] = { [size]: 1, ["shoeSelected"]: { "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price } }
+  //   }
+  // }
+  addToCart(shoe: any, size: any) {
+    let index = this.selectedShoes.findIndex((item: { id: any; }) => item.id === shoe.id)
 
-    // var index = this.shoes.findIndex(item => item.id === shoe.id);
-    // var shoeSize = shoe.size.find((e: any) => {
-    //   return e.size === size
-    // })
-    // var indexSize = this.selectedSize.findIndex((item: { id: number; }) => item.id === shoeSize.id);
-    // // l
-    // if (index >= 0) {
-    //   this.shoes[index].quantity++;
-    // }
-    // else {
-    //   this.shoes.push(shoe);
-    //   this.selectedSize.push(shoeSize);
-    // }
-    // // save cart on sessionStorage
-    // sessionStorage.setItem("cartSession", JSON.stringify(this.shoes));
+    if (index >= 0) {
+
+      let selectedSize = this.selectedShoes[index].sizeS;
+      if (selectedSize.hasOwnProperty([size])) {
+        selectedSize[size]++;
+        // this.selectedShoes[index].quantity++
+      }
+      else {
+        selectedSize[size] = 1;
+      }
+    } else {
+      this.selectedShoes.push({ "sizeS": { [size]: 1 }, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+    }
+    console.log("show ra day ", this.selectedShoes)
   }
+
   getShoes() {
     return this.shoes;
   }
-  getSizes() {
-    return this.selectedSize;
+  getSelectedShoe() {
+    return this.selectedShoes;
   }
   getCartTotalQuantity() {
     let carts: any = this.getShoes();

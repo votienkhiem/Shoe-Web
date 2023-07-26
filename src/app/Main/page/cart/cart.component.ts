@@ -10,8 +10,7 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class CartComponent {
   faTrash = faTrash;
-  items = this.cart.getShoes();
-  selectedShoeASize = this.cart.getSelectedShoe();
+  selectedShoeSize = this.cart.getSelectedShoe();
 
 
   constructor(
@@ -22,21 +21,21 @@ export class CartComponent {
 
   total(): number {
     let totals: number = 0;
-    this.items.forEach(item => totals += item.price * item.quantity);
+    this.selectedShoeSize.forEach(item => totals += item.price * item.quantity);
     return totals;
   }
   totalProductQuantity(): number {
     let totalQuantity: number = 0;
-    this.items.forEach(item => totalQuantity += item.quantity);
+    this.selectedShoeSize.forEach(item => totalQuantity += item.quantity);
     return totalQuantity;
   }
   minus(): number {
     let totalQuantity: number = 0;
-    this.items.forEach(item => totalQuantity = item.quantity--);
+    this.selectedShoeSize.forEach(item => totalQuantity = item.quantity--);
     return totalQuantity
   }
   deleteProduct(index: number): void {
-    this.items.splice(index, 1)
+    this.selectedShoeSize.splice(index, 1)
     this.data.changeData({
       quantity: this.cart.getCartTotalQuantity()
     })

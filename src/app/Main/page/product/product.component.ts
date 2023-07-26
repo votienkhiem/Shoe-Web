@@ -50,6 +50,9 @@ export class ProductComponent {
     // window.alert("Your product has been added to the cart!")
     if (this.submitSize.valid) {
       this.cart.addToCart(shoe, selS);
+      this.data.changeData({
+        quantity: this.cart.getCartTotalQuantity()
+      })
     }
 
   }

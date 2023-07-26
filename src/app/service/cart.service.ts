@@ -44,33 +44,87 @@ export class CartService {
   //     // this.selectedShoes[shoeIdCurrent] = { [size]: 1, ["shoeSelected"]: { "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price } }
   //   }
   // }
+  // addToCart(shoe: any, size: any) {
+  //   let index = this.selectedShoes.findIndex((item: { id: any; }) => item.id === shoe.id)
+
+  //   if (index >= 0) {
+
+  //     let selectedSize = this.selectedShoes[index].sizeS;
+  //     if (selectedSize.hasOwnProperty([size])) {
+  //       selectedSize[size]++;
+  //       this.selectedShoes[index].quantity++
+  //     }
+  //     else {
+  //       selectedSize[size] = 1;
+  //       this.selectedShoes[index].quantity++
+  //     }
+  //   } else {
+  //     this.selectedShoes.push({ "sizeS": { [size]: 1 }, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+  //   }
+  //   console.log("show ra day ", this.selectedShoes)
+  // }
+  // addToCart(shoe: any, size: any) {
+  //   let shoeCheck = this.selectedShoes.find((item: { id: any; }) => item.id === shoe.id)
+  //   // let sizeShoe = this.selectedShoes[indexShoe].size
+
+  //   // if (index ) {
+  //   //   // let selectedSize = this.selectedShoes[index].size;
+  //   //   // let selectedId = this.selectedShoes[index].id;
+  //   //   // if (selectedId && selectedSize.hasOwnProperty([size])) {
+  //   //   //   this.selectedShoes[index].quantity++
+  //   //   // }
+  //   //   // else {
+  //   //   //   // selectedSize[size] = 1;
+  //   //   //   console.log("hello")
+  //   //   // }
+  //   //   // console.log("show size ", selectedSize)
+  //   //   // console.log("show id ", selectedId)
+  //   // } else {
+  //   //   this.selectedShoes.push({ "size": { [size]: 1 }, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+  //   // }
+  //   if (shoeCheck === undefined) {
+  //     this.selectedShoes.push({ "size": size, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+  //   }
+  //   else {
+  //     const newSize = shoeCheck.size;
+
+
+  //     if (newSize.includes([size])) {
+  //       shoeCheck.quantity++;
+  //     }
+  //     else {
+  //       this.selectedShoes.push({ "size": size, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+
+  //     }
+
+  //     // else {
+  //     //   this.selectedShoes.push({ "size": size, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+
+  //     // }
+  //     console.log("show shoeCheck.size ", shoeCheck["size"])
+  //     console.log("show newSize ", shoeCheck.hasOwnProperty("size"))
+
+  //   }
+  //   console.log("show index ", shoeCheck)
+  //   console.log("show selectedShoe ", this.selectedShoes)
+  // }
   addToCart(shoe: any, size: any) {
-    let index = this.selectedShoes.findIndex((item: { id: any; }) => item.id === shoe.id)
-
-    if (index >= 0) {
-
-      let selectedSize = this.selectedShoes[index].sizeS;
-      if (selectedSize.hasOwnProperty([size])) {
-        selectedSize[size]++;
-        // this.selectedShoes[index].quantity++
-      }
-      else {
-        selectedSize[size] = 1;
-      }
+    const sizeShoe = Number(size);
+    const shoeIndex = this.selectedShoes.findIndex(s => s.id === shoe.id && s.size.includes(sizeShoe));
+    if (shoeIndex >= 0) {
+      this.selectedShoes[shoeIndex].quantity++;
     } else {
-      this.selectedShoes.push({ "sizeS": { [size]: 1 }, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
+      this.selectedShoes.push({ size, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
     }
-    console.log("show ra day ", this.selectedShoes)
+    // this.selectedShoes.push(shoe);
+    console.log("show", this.selectedShoes)
   }
 
-  getShoes() {
-    return this.shoes;
-  }
   getSelectedShoe() {
     return this.selectedShoes;
   }
   getCartTotalQuantity() {
-    let carts: any = this.getShoes();
+    let carts: any = this.getSelectedShoe();
     let total: number = 0;
     carts.forEach((item: any) => {
       total += item.quantity

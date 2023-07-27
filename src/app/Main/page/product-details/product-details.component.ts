@@ -5,6 +5,8 @@ import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-product-details',
@@ -16,12 +18,18 @@ export class ProductDetailsComponent {
   shoes: Shoe | undefined
   faPlus = faPlus;
   faMinus = faMinus;
-  selected: string = 'Select a Size';
+  selected: string = '';
+
+
+  submitSize: FormGroup = new FormGroup({
+    size: new FormControl(null, Validators.required)
+  })
 
   constructor(
     private route: ActivatedRoute,
     private shoeService: ShoeingService,
     private cart: CartService,
+    private data: DataService
   ) {
     // First get the product id from the current route
     const routeParams = parseInt(this.route.snapshot.params['shoeId'], 10);
@@ -29,10 +37,16 @@ export class ProductDetailsComponent {
       this.shoes = arrShoes
     })
   }
-  addToCart(shoe: Shoe) {
-    // this.cart.addToCart(shoe);
-    window.alert("Your product has been added to the cart!")
-    console.log(shoe)
+
+  addToCart(shoe: Shoe, selS: any): void {
+    // window.alert("Your product has been added to the cart!")
+    if (this.submitSize.valid) {
+      this.cart.addToCart(shoe, selS);
+      this.data.changeData({
+        quantity: this.cart.getCartTotalQuantity()
+      })
+    }
+
   }
 
   ngOnInit(): void {

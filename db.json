@@ -5,8 +5,9 @@
       "name": "Sneaker",
       "price": 799,
       "description": "A large phone with one of the best screens",
-      "image": "assets/images/shoe1.jpg",
+      "image": "assets/images/unisex/converse1.jpg",
       "quantity": 1,
+      "gender": "male",
       "brand": "Converse",
       "status": "In stock",
       "detail": [
@@ -34,10 +35,11 @@
     {
       "id": 2,
       "name": "Nike Air Force 1",
-      "price": 699,
+      "price": 1100,
       "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
-      "image": "assets/images/shoe2.jpg",
+      "image": "assets/images/unisex/converse2.jpg",
       "quantity": 1,
+      "gender": "male",
       "brand": "Nike",
       "status": "In stock",
       "detail": [
@@ -63,10 +65,11 @@
     {
       "id": 3,
       "name": "Nike Air Max 97",
-      "price": 299,
+      "price": 2800,
       "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
-      "image": "assets/images/shoe3.jpg",
+      "image": "assets/images/unisex/converse3.jpg",
       "quantity": 1,
+      "gender": "female",
       "brand": "Nike",
       "status": "In stock",
       "detail": [
@@ -93,10 +96,11 @@
     {
       "id": 4,
       "name": "Converse",
-      "price": 899,
+      "price": 3650,
       "description": "",
-      "image": "assets/images/shoe4.jpg",
+      "image": "assets/images/unisex/converse4.jpg",
       "quantity": 1,
+      "gender": "female",
       "brand": "Converse",
       "status": "In stock",
       "detail": [
@@ -124,10 +128,11 @@
     {
       "id": 5,
       "name": "Nike Jordan Dior",
-      "price": 456,
+      "price": 3200,
       "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
-      "image": "assets/images/shoe5.jpg",
+      "image": "assets/images/unisex/converse5.jpg",
       "quantity": 1,
+      "gender": "male",
       "brand": "Nike",
       "status": "In stock",
       "detail": [
@@ -155,10 +160,11 @@
     {
       "id": 6,
       "name": "Adidas Stan Smith",
-      "price": 312,
+      "price": 1200,
       "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
-      "image": "assets/images/shoe6.jpg",
+      "image": "assets/images/unisex/converse6.jpg",
       "quantity": 1,
+      "gender": "male",
       "brand": "Adidas",
       "status": "In stock",
       "detail": [
@@ -185,10 +191,11 @@
     {
       "id": 7,
       "name": "Converse Chuck Taylor",
-      "price": 785,
+      "price": 1700,
       "description": "This Chuck 70 helps you express yourself with a new wintery wash",
-      "image": "assets/images/shoe7.jpg",
+      "image": "assets/images/unisex/converse7.jpg",
       "quantity": 1,
+      "gender": "female",
       "brand": "Converse",
       "status": "In stock",
       "detail": [
@@ -216,10 +223,11 @@
     {
       "id": 8,
       "name": "Vans Old Skool",
-      "price": 563,
+      "price": 650,
       "description": "Create your own luck with iconic Chuck 70 sneakers in new, casino-inspired prints.",
-      "image": "assets/images/shoe8.jpg",
+      "image": "assets/images/unisex/converse8.jpg",
       "quantity": 1,
+      "gender": "female",
       "brand": "Vans",
       "status": "Out of stock",
       "detail": [
@@ -242,6 +250,250 @@
         12,
         12.5,
         13
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Chuck Taylor All-Stars",
+      "price": 1350,
+      "description": "Create your own luck with iconic Chuck 70 sneakers in new, casino-inspired prints.",
+      "image": "assets/images/unisex/converse9.jpg",
+      "quantity": 1,
+      "gender": "female",
+      "brand": "Vans",
+      "status": "Out of stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12,
+        12.5,
+        13
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Chuck Taylor Platform",
+      "price": 3420,
+      "description": "Create your own luck with iconic Chuck 70 sneakers in new, casino-inspired prints.",
+      "image": "assets/images/unisex/converse10.jpg",
+      "quantity": 1,
+      "gender": "male",
+      "brand": "Converse",
+      "status": "Out of stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12,
+        12.5,
+        13
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Run Star Motion CX Platform",
+      "price": 1400,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse11.jpg",
+      "quantity": 1,
+      "gender": "female",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Chuck 70 Vintage Canvas",
+      "price": 850,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse12.jpg",
+      "quantity": 1,
+      "gender": "male",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Run Star Legacy CX",
+      "price": 3900,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse13.jpg",
+      "quantity": 1,
+      "gender": "female",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Chuck Taylor All Star Leather",
+      "price": 2300,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse14.jpg",
+      "quantity": 1,
+      "gender": "male",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Chuck 70 Suede",
+      "price": 1900,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse15.jpg",
+      "quantity": 1,
+      "gender": "female",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Jack Purcell Canvas",
+      "price": 920,
+      "description": "The best-ever gets a seasonal makeover with premium canvas in archival color",
+      "image": "assets/images/unisex/converse16.jpg",
+      "quantity": 1,
+      "gender": "male",
+      "brand": "Nike",
+      "status": "In stock",
+      "detail": [
+        "Durable premium canvas and/or denim shoe",
+        "Lightly padded footbed for all-day comfort",
+        "Your choice of trending colors and prints",
+        "Add your own personalized text for one-of-a-kind style",
+        "Custom rubber, linings, and more complete the look"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": [
+        "yellow",
+        "red"
+      ],
+      "size": [
+        10,
+        10.5,
+        11,
+        11.5,
+        12
       ]
     }
   ]

@@ -5,6 +5,7 @@ export interface Shoe {
   description: string,
   image: string,
   quantity: number,
+  gender: string,
   brand: string,
   status: string,
   detail: string,

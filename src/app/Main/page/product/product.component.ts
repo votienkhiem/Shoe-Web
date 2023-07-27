@@ -19,10 +19,12 @@ export class ProductComponent {
   faCaretDown = faCaretDown;
   faXmark = faXmark;
   faMinus = faMinus;
+
   // public approve: boolean = true;
   // public selected: string = '';
-  // public page: number = 1;
+  public page: number = 1;
   // selectedSort: string = ''
+  public titleFilter: string = "All Products"
 
   // submitSize: FormGroup = new FormGroup({
   //   size: new FormControl(null, Validators.required)
@@ -37,7 +39,16 @@ export class ProductComponent {
       this.shoes = arrShoes
     });
   }
-
+  filterMen(): void {
+    this.titleFilter = "Men's Shoes";
+    let filterMale = this.shoes.filter(res => res.gender === "male");
+    this.shoes = filterMale;
+  }
+  filterWoMen(): void {
+    this.titleFilter = "Women's shoes";
+    let filterFemale = this.shoes.filter(res => res.gender === "female");
+    this.shoes = filterFemale;
+  }
   // addToCart(shoe: Shoe, selS: any): void {
   //   // window.alert("Your product has been added to the cart!")
   //   if (this.submitSize.valid) {

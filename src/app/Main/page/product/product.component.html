@@ -9,7 +9,7 @@
               <nav class="nav-category">
                 <ul class="nav-ul-category">
                   <li class="nav-item nav-men">
-                    <a href="">Men</a>
+                    <a (click)="filterMen()">Men</a>
                     <label for="btn-check-drop">
                       <fa-icon [icon]="faCaretDown"></fa-icon>
                     </label>
@@ -21,7 +21,7 @@
                     </ul>
                   </li>
                   <li class="nav-item nav-women">
-                    <a href="">Women</a>
+                    <a (click)="filterWoMen()">Women</a>
                     <label for="btn-check-drop-women">
                       <fa-icon [icon]="faCaretDown"></fa-icon>
                     </label>
@@ -132,7 +132,7 @@
       <!-- <div class="row">
         <div class="allShoe">
           <div class="name-AllShoe">
-            <span>All products</span>
+            <span>{{ title }}</span>
           </div>
           <div class="arrange-AllShoe">
             <label for="arrange">Arrange:</label>
@@ -240,9 +240,13 @@
             </div>
           </div>
         </div>
+        <app-product-card></app-product-card>
         <pagination-controls (pageChange)="page = $event"></pagination-controls>
       </div> -->
-      <app-product-card></app-product-card>
+      <app-product-card
+        [shoes]="shoes"
+        [title]="titleFilter"
+      ></app-product-card>
     </div>
   </div>
 </div>

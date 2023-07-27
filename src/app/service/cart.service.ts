@@ -19,7 +19,7 @@ export class CartService {
     } else {
       this.selectedShoes.push({ size, "quantity": 1, "id": shoe.id, "name": shoe.name, "image": shoe.image, "price": shoe.price })
     }
-    console.log("show", this.selectedShoes)
+    // console.log("show", this.selectedShoes)
     // save cart on sessionStorage
     sessionStorage.setItem("cartSession", JSON.stringify(this.selectedShoes));
   }

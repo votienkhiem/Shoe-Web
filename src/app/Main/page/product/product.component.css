@@ -259,6 +259,7 @@ button.changeColor {
 
 .nav-ul-category li a:hover {
   font-weight: bold;
+  cursor: pointer;
   color: #FF3066;
 }
 

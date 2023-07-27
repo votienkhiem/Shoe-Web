@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { faCaretDown, faXmark, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { CartService } from 'src/app/service/cart.service';
@@ -12,7 +12,7 @@ import { Shoe } from 'src/shoe';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent {
-  shoes: Shoe[] = [];
+  // shoes: Shoe[] = [];
 
   faCaretDown = faCaretDown;
   faXmark = faXmark;
@@ -20,20 +20,26 @@ export class ProductCardComponent {
   public approve: boolean = true;
   public selected: string = '';
   public page: number = 1;
-  selectedSort: string = ''
+  public selectedSort: string = '';
+
+  @Input() title: string | undefined;
+  // @Input() filterMen: any;
+  @Input() shoes: any;
 
   submitSize: FormGroup = new FormGroup({
     size: new FormControl(null, Validators.required)
   })
+
+
 
   constructor(
     private shoeService: ShoeingService,
     private cart: CartService,
     private data: DataService
   ) {
-    this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
-      this.shoes = arrShoes
-    });
+    // this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+    //   this.shoes = arrShoes
+    // });
   }
   addToCart(shoe: Shoe, selS: any): void {
     // window.alert("Your product has been added to the cart!")
@@ -43,7 +49,6 @@ export class ProductCardComponent {
         quantity: this.cart.getCartTotalQuantity()
       })
     }
-
   }
   ngOnInit() {
     this.data.changeData({
@@ -71,26 +76,26 @@ export class ProductCardComponent {
   sortAZ(): void {
     switch (this.selectedSort) {
       case "AtoZ": {
-        this.shoes.sort((s1, s2) => {
+        this.shoes.sort((s1: { name: string; }, s2: { name: string; }) => {
           return s1.name > s2.name ? 1 : -1
         })
         break;
       }
       case "ZtoA": {
-        this.shoes.sort((s1, s2) => {
+        this.shoes.sort((s1: { name: string; }, s2: { name: string; }) => {
           return s1.name > s2.name ? -1 : 1
         })
         break;
       }
       case "PriceLowToHigh": {
-        this.shoes.sort((p1, p2) => {
+        this.shoes.sort((p1: { price: number; }, p2: { price: number; }) => {
           return p1.price > p2.price ? 1 : -1;
         })
         break;
       }
       case "PriceHighToLow": {
 
-        this.shoes.sort((s1, s2) => {
+        this.shoes.sort((s1: { price: number; }, s2: { price: number; }) => {
           return s1.price > s2.price ? -1 : 1
         })
         break;

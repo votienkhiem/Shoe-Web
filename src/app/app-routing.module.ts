@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'products/:shoeId', loadChildren: () => import('./Main/page/product-details/product-details.module').then(m => m.ProductDetailsModule) },
   { path: 'payment', loadChildren: () => import('./Main/page/payment/payment.module').then(m => m.PaymentModule) },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: 'product-card', loadChildren: () => import('./Main/page/product-card/product-card.module').then(m => m.ProductCardModule) },
   { path: '**', loadChildren: () => import('./Main/page/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
 

@@ -31,3 +31,6 @@ json-server --watch db.json
 /_ Mobile: width < 740px _/
 /_ Tablet: width >= 740px and width < 1024px _/
 json-server --watch account.json --port 3004
+ng g c KeyComponent --skipTests
+lazy loading
+ng g m Main/page/product-card --route product-card --module app.module

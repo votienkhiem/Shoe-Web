@@ -6,12 +6,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductComponent } from './product.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { SearchComponent } from '../search/search.component';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 
 
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [ProductComponent, ProductCardComponent],
   imports: [
     CommonModule,
     ProductRoutingModule,

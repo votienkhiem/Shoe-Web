@@ -15,18 +15,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductComponent {
   shoes: Shoe[] = [];
-  listEmpty: Array<any> = [];
+  // listEmpty: Array<any> = [];
   faCaretDown = faCaretDown;
   faXmark = faXmark;
   faMinus = faMinus;
-  public approve: boolean = true;
-  public selected: string = '';
-  public page: number = 1;
-  selectedSort: string = ''
+  // public approve: boolean = true;
+  // public selected: string = '';
+  // public page: number = 1;
+  // selectedSort: string = ''
 
-  submitSize: FormGroup = new FormGroup({
-    size: new FormControl(null, Validators.required)
-  })
+  // submitSize: FormGroup = new FormGroup({
+  //   size: new FormControl(null, Validators.required)
+  // })
 
   constructor(
     private shoeService: ShoeingService,
@@ -37,90 +37,82 @@ export class ProductComponent {
       this.shoes = arrShoes
     });
   }
-  // addToCart(shoe: Shoe): void {
+
+  // addToCart(shoe: Shoe, selS: any): void {
   //   // window.alert("Your product has been added to the cart!")
   //   if (this.submitSize.valid) {
-  //     this.cart.addToCart(shoe);
+  //     this.cart.addToCart(shoe, selS);
   //     this.data.changeData({
   //       quantity: this.cart.getCartTotalQuantity()
   //     })
   //   }
+
   // }
-  addToCart(shoe: Shoe, selS: any): void {
-    // window.alert("Your product has been added to the cart!")
-    if (this.submitSize.valid) {
-      this.cart.addToCart(shoe, selS);
-      this.data.changeData({
-        quantity: this.cart.getCartTotalQuantity()
-      })
-    }
+  // ngOnInit() {
+  //   this.data.changeData({
+  //     quantity: this.cart.getCartTotalQuantity(),
+  //   })
+  // }
+  // onShow(i: any): void {
+  //   const show = document.getElementById(i);
 
-  }
-  ngOnInit() {
-    this.data.changeData({
-      quantity: this.cart.getCartTotalQuantity(),
-    })
-  }
-  onShow(i: any): void {
-    const show = document.getElementById(i);
+  //   if (show != null) {
+  //     show.style.display = 'block';
+  //     this.approve = !this.approve;
+  //   }
+  // }
+  // closeShow(i: any): void {
+  //   const show = document.getElementById(i);
+  //   if (show != null) {
+  //     show.style.display = 'none';
+  //     this.approve = !this.approve;
 
-    if (show != null) {
-      show.style.display = 'block';
-      this.approve = !this.approve;
-    }
-  }
-  closeShow(i: any): void {
-    const show = document.getElementById(i);
-    if (show != null) {
-      show.style.display = 'none';
-      this.approve = !this.approve;
+  //   }
+  // }
+  // searchText: string = ''
+  // onSearch(event: any) {
+  //   this.searchText = event;
+  //   console.log("123313", this.searchText = event)
+  //   //   if (!text) {
+  //   //     this.shoes = this.listEmpty;
+  //   //   }
+  //   //   this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()))
 
-    }
-  }
-  searchText: string = ''
-  onSearch(event: any) {
-    this.searchText = event;
-    console.log("123313", this.searchText = event)
-    //   if (!text) {
-    //     this.shoes = this.listEmpty;
-    //   }
-    //   this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()))
+  //   // if (this.searchText = event) {
+  //   //   this.shoes = this.listEmpty;
+  //   // }
+  //   // this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes((this.searchText = event).toLowerCase()))
 
-    // if (this.searchText = event) {
-    //   this.shoes = this.listEmpty;
-    // }
-    // this.listEmpty = this.shoes.filter(data => data.name.toLowerCase().includes((this.searchText = event).toLowerCase()))
+  //   // console.log('mang search', this.listEmpty)
+  // }
 
-    // console.log('mang search', this.listEmpty)
-  }
+  // sortAZ(): void {
+  //   switch (this.selectedSort) {
+  //     case "AtoZ": {
+  //       this.shoes.sort((s1, s2) => {
+  //         return s1.name > s2.name ? 1 : -1
+  //       })
+  //       break;
+  //     }
+  //     case "ZtoA": {
+  //       this.shoes.sort((s1, s2) => {
+  //         return s1.name > s2.name ? -1 : 1
+  //       })
+  //       break;
+  //     }
+  //     case "PriceLowToHigh": {
+  //       this.shoes.sort((p1, p2) => {
+  //         return p1.price > p2.price ? 1 : -1;
+  //       })
+  //       break;
+  //     }
+  //     case "PriceHighToLow": {
 
-  sortAZ(): void {
-    switch (this.selectedSort) {
-      case "AtoZ": {
-        this.shoes.sort((s1, s2) => {
-          return s1.name > s2.name ? 1 : -1
-        })
-        break;
-      }
-      case "ZtoA": {
-        this.shoes.sort((s1, s2) => {
-          return s1.name > s2.name ? -1 : 1
-        })
-        break;
-      }
-      case "PriceLowToHigh": {
-        this.shoes.sort((p1, p2) => {
-          return p1.price > p2.price ? 1 : -1;
-        })
-        break;
-      }
-      case "PriceHighToLow": {
-
-        this.shoes.sort((s1, s2) => {
-          return s1.price > s2.price ? -1 : 1
-        })
-        break;
-      }
-    }
-  }
+  //       this.shoes.sort((s1, s2) => {
+  //         return s1.price > s2.price ? -1 : 1
+  //       })
+  //       break;
+  //     }
+  //   }
+  // }
 }

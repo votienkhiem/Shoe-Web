@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="allShoe">
+    <div class="name-AllShoe">
+      <span>All products</span>
+    </div>
+    <div class="arrange-AllShoe">
+      <label for="arrange">Arrange:</label>
+      <select
+        class="form-select"
+        [(ngModel)]="selectedSort"
+        (ngModelChange)="sortAZ()"
+      >
+        <option value="">Default</option>
+        <option value="AtoZ">A → Z</option>
+        <option value="ZtoA">Z → A</option>
+        <option value="PriceLowToHigh">Price low to high</option>
+        <option value="PriceHighToLow">Price high to low</option>
+      </select>
+    </div>
+  </div>
+  <div class="allProducts">
+    <div
+      class="col-xl-4 col-md-6 col-sm-12 product-shoe"
+      *ngFor="
+        let shoe of shoes | paginate : { itemsPerPage: 8, currentPage: page };
+        index as i
+      "
+    >
+      <div class="container-list-shoe">
+        <div class="btn-addToCart">
+          <img src="{{ shoe.image }}" alt="" class="img-shoe" />
+
+          <div class="showSize" id="{{ i }}">
+            <div class="size">
+              <div class="size-btn-close">
+                <button (click)="closeShow(i)">
+                  <fa-icon [icon]="faXmark"></fa-icon>
+                </button>
+              </div>
+              <span>Size</span>
+              <form action="" method="POST" [formGroup]="submitSize">
+                <div class="form-group">
+                  <select
+                    name="size"
+                    id="size"
+                    formControlName="size"
+                    [(ngModel)]="selected"
+                  >
+                    <option value="">Select a size</option>
+                    <option *ngFor="let item of shoe.size; index as i">
+                      {{ item }}
+                    </option>
+                  </select>
+                  <div
+                    *ngIf="
+                      submitSize['controls']['size'].dirty &&
+                      submitSize['controls']['size'].errors
+                    "
+                  >
+                    <small
+                      *ngIf="submitSize['controls']['size'].errors['required']"
+                      >Choose a size</small
+                    >
+                  </div>
+                </div>
+                <div class="size-btn-addCart">
+                  <button
+                    type="submit"
+                    class="changeColor"
+                    (click)="addToCart(shoe, selected)"
+                    [disabled]="submitSize.invalid"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn-submit-cart"
+            *ngIf="approve"
+            (click)="onShow(i)"
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <div class="shoe-name">
+          <h3>
+            <a
+              [title]="shoe.name + ' details'"
+              [routerLink]="['/products', shoe.id]"
+              >{{ shoe.name }}</a
+            >
+          </h3>
+        </div>
+        <div>
+          <h6>{{ shoe.price | number : "1.0-2" }}$</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

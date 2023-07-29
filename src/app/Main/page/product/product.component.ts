@@ -24,7 +24,12 @@ export class ProductComponent {
   // public selected: string = '';
   public page: number = 1;
   // selectedSort: string = ''
-  public titleFilter: string = "All Products"
+  public titleFilter: string = "All Products";
+  public isPriceFilteredFiveToTen = false;
+  public isPriceFilteredTenToFif = false;
+  public isPriceFilteredFifToThirty = false;
+  public isPriceFilteredOverThirty = false;
+
 
   // submitSize: FormGroup = new FormGroup({
   //   size: new FormControl(null, Validators.required)
@@ -38,6 +43,52 @@ export class ProductComponent {
     this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
       this.shoes = arrShoes
     });
+  }
+
+  filterFiveToTen(): void {
+    if (this.isPriceFilteredFiveToTen) {
+      let filterPrice = this.shoes.filter(res => res.price < 1000);
+      this.shoes = filterPrice;
+    }
+    else {
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes
+      });
+    }
+
+  }
+  filterTenToFif(): void {
+    if (this.isPriceFilteredTenToFif) {
+      let filterPrice = this.shoes.filter(res => res.price > 1000 && res.price < 1500);
+      this.shoes = filterPrice;
+    }
+    else {
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes
+      });
+    }
+  }
+  filterFifToThirty(): void {
+    if (this.isPriceFilteredFifToThirty) {
+      let filterPrice = this.shoes.filter(res => res.price > 1500 && res.price < 3000);
+      this.shoes = filterPrice;
+    }
+    else {
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes
+      });
+    }
+  }
+  filterOverThirty(): void {
+    if (this.isPriceFilteredOverThirty) {
+      let filterPrice = this.shoes.filter(res => res.price > 3000);
+      this.shoes = filterPrice;
+    }
+    else {
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes
+      });
+    }
   }
   filterMen(): void {
     this.titleFilter = "Men's Shoes";

@@ -75,6 +75,12 @@ export class ProductCardComponent {
 
   sortAZ(): void {
     switch (this.selectedSort) {
+      case "": {
+        this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+          this.shoes = arrShoes
+        });
+        break;
+      }
       case "AtoZ": {
         this.shoes.sort((s1: { name: string; }, s2: { name: string; }) => {
           return s1.name > s2.name ? 1 : -1

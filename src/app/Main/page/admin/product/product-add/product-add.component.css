@@ -36,6 +36,12 @@ label {
   font-size: 18px;
 }
 
+.gender span {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .color span {
   float: left;
   font-weight: bold;

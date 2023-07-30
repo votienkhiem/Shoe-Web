@@ -15,6 +15,7 @@ export class ProductAddComponent {
     quantity: new FormControl('1', Validators.required),
     brand: new FormControl('', Validators.required),
     status: new FormControl('Status', Validators.required),
+    gender: new FormControl('Gender', Validators.required),
     detail: new FormControl('', Validators.required),
     history: new FormControl('', Validators.required),
     color: new FormControl('Color', Validators.required),

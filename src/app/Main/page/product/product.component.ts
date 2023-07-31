@@ -31,6 +31,7 @@ export class ProductComponent {
   public isPriceFilteredOverThirty = false;
 
 
+
   // submitSize: FormGroup = new FormGroup({
   //   size: new FormControl(null, Validators.required)
   // })
@@ -99,6 +100,10 @@ export class ProductComponent {
     this.titleFilter = "Women's shoes";
     let filterFemale = this.shoes.filter(res => res.gender === "female");
     this.shoes = filterFemale;
+  }
+  filterShoeSneaker(): void {
+    let filterMale = this.shoes.filter(res => res.name === "Sneaker");
+    this.shoes = filterMale;
   }
   // addToCart(shoe: Shoe, selS: any): void {
   //   // window.alert("Your product has been added to the cart!")

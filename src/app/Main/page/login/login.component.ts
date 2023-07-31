@@ -39,8 +39,5 @@ export class LoginComponent {
         alert(" incorrect username or password")
       }
     }
-
-
-
   }
 }

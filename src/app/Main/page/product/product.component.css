@@ -299,6 +299,7 @@ button.changeColor {
 .dropdown-men ul li a:hover {
   font-weight: bold;
   color: #FF3066;
+  cursor: pointer;
 }
 
 /* end nav-men */

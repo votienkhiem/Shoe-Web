@@ -22,7 +22,6 @@ export class ProductEditComponent {
     size: new FormControl('', Validators.required),
   })
 
-
   editSubmit(): void {
     if (this.editF.valid) {
 

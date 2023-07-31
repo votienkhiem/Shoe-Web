@@ -1,213 +1,216 @@
 <div class="container text-center">
   <div class="row">
-    <div class="col-xl-12 add">
+    <div class="col-xl-12 edit">
       <h4>EDIT PRODUCTS</h4>
-      <div class="form-addProduct">
+      <div class="form-editProduct">
         <form action="" method="POST" [formGroup]="editF">
-          <!-- name -->
-          <div class="mb-3 form-group">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Name</label
+          <div class="form1">
+            <!-- name -->
+            <div class="mb-3 form-group">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Enter a name"
+                formControlName="name"
+              />
+            </div>
+            <div
+              *ngIf="
+                editF['controls']['name'].dirty &&
+                editF['controls']['name'].errors
+              "
             >
-            <input
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter a name"
-              formControlName="name"
-            />
-          </div>
-          <div
-            *ngIf="
-              editF['controls']['name'].dirty &&
-              editF['controls']['name'].errors
-            "
-          >
-            <small
-              *ngIf="editF['controls']['name'].errors['required']"
-              [ngClass]="{ error: editF['controls']['name'].errors }"
-              >Please enter a name product</small
-            >
-          </div>
-          <!-- image -->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Image</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="enter link image"
-              formControlName="image"
-            />
-          </div>
-          <!-- price -->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Price</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter a price"
-              formControlName="price"
-            />
-          </div>
-          <div
-            *ngIf="
-              editF['controls']['price'].dirty &&
-              editF['controls']['price'].errors
-            "
-          >
-            <small
-              *ngIf="editF['controls']['price'].errors['required']"
-              [ngClass]="{ error: editF['controls']['price'].errors }"
-              >Please enter a price product</small
-            >
-          </div>
-          <!-- description -->
-
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Description</label
-            >
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              formControlName="description"
-            ></textarea>
-          </div>
-          <!-- quantity -->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Quantity</label
-            >
-            <input
-              readonly
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              value="1"
-            />
-          </div>
-          <!-- brand -->
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Brand</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter a brand"
-              formControlName="brand"
-            />
-          </div>
-          <div
-            *ngIf="
-              editF['controls']['brand'].dirty &&
-              editF['controls']['brand'].errors
-            "
-          >
-            <small
-              *ngIf="editF['controls']['brand'].errors['required']"
-              [ngClass]="{ error: editF['controls']['brand'].errors }"
-              >Please enter a brand product</small
-            >
-          </div>
-          <!-- status -->
-          <div class="status">
-            <span>Status</span>
-            <select
-              class="form-select form-select-lg mb-3"
-              aria-label=".form-select-lg example"
-              formControlName="status"
-            >
-              <option>Status</option>
-              <option value="In stock">In stock</option>
-              <option value="Out of stock">Out of Stock</option>
-            </select>
-          </div>
-          <!-- gender -->
-          <div class="gender">
-            <span>Gender</span>
-            <select
-              class="form-select form-select-lg mb-3"
-              aria-label=".form-select-lg example"
-              formControlName="gender"
-            >
-              <option>Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-          <!-- detail -->
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Detail</label
-            >
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              formControlName="detail"
-            ></textarea>
-          </div>
-          <!-- history -->
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >History</label
-            >
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              formControlName="history"
-            ></textarea>
-          </div>
-          <!-- color -->
-          <div class="color">
-            <span>Color</span>
-            <select
-              class="form-select form-select-lg mb-3"
-              aria-label=".form-select-lg example"
-              formControlName="color"
-            >
-              <option selected>Color</option>
-              <option value="Blue">Blue</option>
-              <option value="Red">Red</option>
-              <option value="Yellow">Yellow</option>
-            </select>
-          </div>
-          <!-- size -->
-          <div class="size">
+              <small
+                *ngIf="editF['controls']['name'].errors['required']"
+                [ngClass]="{ error: editF['controls']['name'].errors }"
+                >Please enter a name product</small
+              >
+            </div>
+            <!-- image -->
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
-                >Size</label
+                >Image</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="enter link image"
+                formControlName="image"
+              />
+            </div>
+            <!-- price -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Price</label
               >
               <input
                 type="number"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="Enter a size"
-                formControlName="size"
+                placeholder="Enter a price"
+                formControlName="price"
               />
             </div>
-          </div>
-          <div
-            *ngIf="
-              editF['controls']['size'].dirty &&
-              editF['controls']['size'].errors
-            "
-          >
-            <small
-              *ngIf="editF['controls']['size'].errors['required']"
-              [ngClass]="{ error: editF['controls']['size'].errors }"
-              >Please enter a size product</small
+            <div
+              *ngIf="
+                editF['controls']['price'].dirty &&
+                editF['controls']['price'].errors
+              "
             >
+              <small
+                *ngIf="editF['controls']['price'].errors['required']"
+                [ngClass]="{ error: editF['controls']['price'].errors }"
+                >Please enter a price product</small
+              >
+            </div>
+            <!-- quantity -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Quantity</label
+              >
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                value="1"
+              />
+            </div>
+            <!-- brand -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Brand</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Enter a brand"
+                formControlName="brand"
+              />
+            </div>
+            <div
+              *ngIf="
+                editF['controls']['brand'].dirty &&
+                editF['controls']['brand'].errors
+              "
+            >
+              <small
+                *ngIf="editF['controls']['brand'].errors['required']"
+                [ngClass]="{ error: editF['controls']['brand'].errors }"
+                >Please enter a brand product</small
+              >
+            </div>
+            <!-- size -->
+            <div class="size">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Size</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter a size"
+                  formControlName="size"
+                />
+              </div>
+            </div>
+            <div
+              *ngIf="
+                editF['controls']['size'].dirty &&
+                editF['controls']['size'].errors
+              "
+            >
+              <small
+                *ngIf="editF['controls']['size'].errors['required']"
+                [ngClass]="{ error: editF['controls']['size'].errors }"
+                >Please enter a size product</small
+              >
+            </div>
+            <!-- color -->
+            <div class="color">
+              <span>Color</span>
+              <select
+                class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+                formControlName="color"
+              >
+                <option selected>Color</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+              </select>
+            </div>
+          </div>
+          <div class="form2">
+            <!-- status -->
+            <div class="status">
+              <span>Status</span>
+              <select
+                class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+                formControlName="status"
+              >
+                <option>Status</option>
+                <option value="In stock">In stock</option>
+                <option value="Out of stock">Out of Stock</option>
+              </select>
+            </div>
+            <!-- gender -->
+            <div class="gender">
+              <span>Gender</span>
+              <select
+                class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example"
+                formControlName="gender"
+              >
+                <option>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <!-- detail -->
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Detail</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                formControlName="detail"
+              ></textarea>
+            </div>
+            <!-- history -->
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >History</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                formControlName="history"
+              ></textarea>
+            </div>
+            <!-- description -->
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Description</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                formControlName="description"
+              ></textarea>
+            </div>
           </div>
         </form>
         <button

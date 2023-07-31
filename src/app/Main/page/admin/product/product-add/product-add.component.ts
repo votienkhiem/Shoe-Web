@@ -1,5 +1,7 @@
+import { Route, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CrudService } from 'src/app/service/crud.service';
 
 @Component({
   selector: 'app-product-add',
@@ -22,11 +24,16 @@ export class ProductAddComponent {
     size: new FormControl('', Validators.required),
   })
 
-
+  constructor(
+    private crud: CrudService,
+    private router: Router
+  ) { }
   addSubmit(): void {
     if (this.addF.valid) {
-
-      console.log(this.addF.value);
+      this.crud.add(this.addF.value).subscribe(res => {
+        this.router.navigate(['/admin'])
+        // console.log(this.addF.value);
+      })
     }
   }
 }

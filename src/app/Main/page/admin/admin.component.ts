@@ -25,7 +25,5 @@ export class AdminComponent {
       this.shoes = res;
     })
   }
-  onEdit(id: number): void {
-    console.log("hien thi id", id)
-  }
+
 }

@@ -13,9 +13,15 @@ export class CrudService {
     return this.http.get<any>(this.url);
   }
   getById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.url}/${id}`)
+    return this.http.get<any>(`${this.url}/${id}`);
   }
   delete(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.url}/${id}`)
+    return this.http.delete<any>(`${this.url}/${id}`);
+  }
+  add(data: any): Observable<any> {
+    return this.http.post<any>(this.url, data);
+  }
+  update(id: number, data: any): Observable<any> {
+    return this.http.put<any>(`${this.url}/${id}`, data);
   }
 }

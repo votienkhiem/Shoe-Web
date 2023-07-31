@@ -7,7 +7,7 @@ import { ProductAddComponent } from './product/product-add/product-add.component
 const routes: Routes = [{
   path: '', children: [
     { path: '', component: AdminComponent },
-    { path: 'edit', loadChildren: () => import('./product/product-edit/product-edit.module').then(m => m.ProductEditModule) },
+    { path: 'edit/:id', loadChildren: () => import('./product/product-edit/product-edit.module').then(m => m.ProductEditModule) },
     { path: 'add', loadChildren: () => import('./product/product-add/product-add.module').then(m => m.ProductAddModule) },
   ]
 }];

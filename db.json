@@ -450,7 +450,24 @@
     },
     {
       "name": "Chuck Taylor All Star Trek 70s",
-      "image": "\"assets/images/shoe8.jpg\"",
+      "image": "assets/images/shoe8.jpg",
+      "price": 1239,
+      "description": "ad",
+      "quantity": "1",
+      "brand": "converse",
+      "status": "Out of stock",
+      "gender": "male",
+      "detail": "full details",
+      "history": "his",
+      "color": "Yellow",
+      "size": [
+        40
+      ],
+      "id": 17
+    },
+    {
+      "name": "Chuck Taylor All Star Trek 70s",
+      "image": "assets/images/shoe7.jpg",
       "price": 1239,
       "description": "ad",
       "quantity": "1",
@@ -460,8 +477,10 @@
       "detail": "full details",
       "history": "his",
       "color": "Red",
-      "size": "40",
-      "id": 17
+      "size": [
+        12
+      ],
+      "id": 18
     }
   ]
 }

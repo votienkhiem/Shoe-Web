@@ -12,6 +12,8 @@ import { Shoe } from 'src/shoe';
 })
 export class AdminComponent {
   shoes: Shoe[] = [];
+  listItems: Array<any> = [];
+
 
   constructor(
     private shoeService: ShoeingService,
@@ -25,5 +27,15 @@ export class AdminComponent {
       this.shoes = res;
     })
   }
+  searchItems(text: string): void {
+    if (!text) {
+      this.shoes = this.listItems
+    }
+    this.shoes = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()));
+  }
+  deleteItem(id: number) {
+    console.log("id items", id)
+  }
+
 
 }

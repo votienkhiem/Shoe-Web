@@ -5,8 +5,20 @@
       <div class="search-product">
         <div class="search-item">
           <label for="search">SEARCH</label>
-          <input type="text" name="search" id="" placeholder="Search product" />
-          <button type="button" class="btn btn-secondary">Search</button>
+          <input
+            type="text"
+            name="search"
+            id=""
+            placeholder="Search product"
+            #search
+          />
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="searchItems(search.value)"
+          >
+            Search
+          </button>
         </div>
         <div>
           <button type="button" class="btn btn-primary" routerLink="/admin/add">
@@ -48,7 +60,13 @@
                 >
                   Edit
                 </button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="deleteItem(i)"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           </tbody>

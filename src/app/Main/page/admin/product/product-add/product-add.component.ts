@@ -2,6 +2,7 @@ import { Route, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/service/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-add',
@@ -31,6 +32,12 @@ export class ProductAddComponent {
   addSubmit(): void {
     if (this.addF.valid) {
       this.crud.add(this.addF.value).subscribe(res => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
         this.router.navigate(['/admin'])
         // console.log(this.addF.value);
       })

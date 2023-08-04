@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CrudService } from 'src/app/service/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-edit',
@@ -54,9 +55,15 @@ export class ProductEditComponent {
       const routeParams = parseInt(this.route.snapshot.params['id'], 10);
 
       this.crud.update(routeParams, this.editF.value).subscribe(res => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
         this.router.navigate(['/admin'])
         // console.log(this.editF.value)
-        console.log(res)
+        // console.log(res)
       })
     }
   }

@@ -214,20 +214,36 @@
                   <tr>
                     <td><span>Products</span></td>
                   </tr>
-                  <tr class="items">
-                    <td><span>sneaker</span></td>
-                    <td><span>3000$</span></td>
+                  <tr class="items" *ngFor="let item of cardShoe">
+                    <td>
+                      <img
+                        src="{{ item.image }}"
+                        alt=""
+                        style="
+                          width: 60px;
+                          height: 60px;
+                          margin-top: 10px;
+                          border-radius: 5px;
+                        "
+                      />
+                    </td>
+                    <td>
+                      <span>{{ item.name }}-{{ item.size }}</span>
+                    </td>
+                    <td>
+                      <span style="font-weight: bold">{{ item.price }}$</span>
+                    </td>
                   </tr>
                   <tr>
                     <td colspan="2">Total</td>
                     <td>
-                      <span>1000$</span>
+                      <span>{{ total() }}$</span>
                     </td>
                   </tr>
                   <tr class="paymentTotal">
                     <td colspan="2">Total Payment</td>
                     <td>
-                      <span>2000$</span>
+                      <span>{{ total() }}$</span>
                     </td>
                   </tr>
                   <button (click)="onSubmit()" [disabled]="paymentF.invalid">

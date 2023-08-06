@@ -42,7 +42,6 @@ export class AdminComponent {
     //     })
     //   })
     // }
-
     Swal.fire({
       title: 'Are you sure?',
       text: "Do you want to delete the product ?",

@@ -15,7 +15,7 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class ProductDetailsComponent {
 
-  shoes: Shoe | undefined
+  shoes: Shoe | undefined;
   faPlus = faPlus;
   faMinus = faMinus;
   selected: string = '';

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PreloadAllModules } from '@angular/router';
+import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found.component';
 
 
 
@@ -11,11 +12,10 @@ const routes: Routes = [
   { path: 'search', loadChildren: () => import('./Main/page/search/search.module').then(m => m.SearchModule) },
   { path: 'admin', loadChildren: () => import('./Main/page/admin/admin.module').then(m => m.AdminModule) },
   { path: 'login', loadChildren: () => import('./Main/page/login/login.module').then(m => m.LoginModule) },
-  { path: 'products/:shoeId', loadChildren: () => import('./Main/page/product-details/product-details.module').then(m => m.ProductDetailsModule) },
   { path: 'payment', loadChildren: () => import('./Main/page/payment/payment.module').then(m => m.PaymentModule) },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  // { path: 'product-card', loadChildren: () => import('./Main/page/product-card/product-card.module').then(m => m.ProductCardModule) },
-  { path: '**', loadChildren: () => import('./Main/page/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
+  { path: '**', component: PageNotFoundComponent }
+  // { path: '**', loadChildren: () => import('./Main/page/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
 
 @NgModule({

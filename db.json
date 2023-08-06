@@ -472,12 +472,12 @@
       "description": "cxzcxz",
       "quantity": "1",
       "brand": "converse",
-      "status": "Out of stock",
+      "status": "In stock",
       "gender": "male",
       "detail": "full canvas",
       "history": "ác",
       "color": "Red",
-      "size": "45",
+      "size": 1,
       "id": 18
     }
   ]

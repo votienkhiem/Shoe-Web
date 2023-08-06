@@ -7,19 +7,21 @@ import { ProductComponent } from './product.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { SearchComponent } from '../search/search.component';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { SearchModule } from '../search/search.module';
 
 
 
 
 @NgModule({
-  declarations: [ProductComponent, ProductCardComponent],
+  declarations: [ProductComponent, ProductCardComponent, ProductDetailsComponent],
   imports: [
     CommonModule,
     ProductRoutingModule,
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule,
+    NgxPaginationModule
   ]
 })
 export class ProductModule { }

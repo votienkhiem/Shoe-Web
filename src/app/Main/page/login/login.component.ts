@@ -32,10 +32,9 @@ export class LoginComponent {
     if (this.loginF.valid) {
 
       if (this.user = userName && this.pass == pass) {
-
+        sessionStorage.setItem('token', Math.random().toString())
         this.route.navigateByUrl('admin')
       } else {
-
         alert(" incorrect username or password")
       }
     }

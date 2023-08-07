@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { faCaretDown, faXmark, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { CartService } from 'src/app/service/cart.service';

@@ -4,7 +4,6 @@ import { SearchComponent } from './search.component';
 import { SearchRoutingModule } from './search-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductCardComponent } from '../product-card/product-card.component';
 
 
 

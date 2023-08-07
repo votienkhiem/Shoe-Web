@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'payment', loadChildren: () => import('./Main/page/payment/payment.module').then(m => m.PaymentModule) },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
-  // { path: '**', loadChildren: () => import('./Main/page/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
 
 @NgModule({

@@ -477,7 +477,9 @@
       "detail": "full canvas",
       "history": "ác",
       "color": "Red",
-      "size": 1,
+      "size": [
+        40
+      ],
       "id": 18
     }
   ]

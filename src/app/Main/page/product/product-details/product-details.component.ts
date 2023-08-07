@@ -1,12 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { CartService } from 'src/app/service/cart.service';
+import { DataService } from 'src/app/service/data.service';
 import { ShoeingService } from 'src/app/service/shoeing.service';
 import { Shoe } from 'src/shoe';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { faMinus } from '@fortawesome/free-solid-svg-icons';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,7 +13,6 @@ import { DataService } from 'src/app/service/data.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent {
-
   shoes: Shoe | undefined;
   faPlus = faPlus;
   faMinus = faMinus;
@@ -54,6 +52,5 @@ export class ProductDetailsComponent {
   ngOnInit(): void {
 
   }
-
 
 }

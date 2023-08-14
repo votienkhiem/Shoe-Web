@@ -7,6 +7,7 @@ import { Shoe } from 'src/shoe';
 import { CartService } from '../service/cart.service';
 import { DataService } from '../service/data.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class HeaderComponent {
   totalQuantity: number = 0;
   constructor(
     private cart: CartService,
-    private data: DataService
+    private data: DataService,
+    private router: Router
   ) { }
   private subscription = new Subscription()
   ngOnInit(): void {
@@ -35,5 +37,10 @@ export class HeaderComponent {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-
+  shoeMen(): void {
+    this.router.navigate(['/product'], { queryParams: { category: 'menShoe' } })
+  }
+  // shoeWomen(): void {
+  //   this.router.navigate(['/product'], { queryParams: { category: 'womenShoe' } })
+  // }
 }

@@ -8,7 +8,7 @@ export interface Shoe {
   gender: string,
   brand: string,
   status: string,
-  detail: string,
+  detail: any,
   history: string,
   size: any,
   color: string,

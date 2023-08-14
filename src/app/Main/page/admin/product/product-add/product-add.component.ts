@@ -30,8 +30,31 @@ export class ProductAddComponent {
     private router: Router
   ) { }
   addSubmit(): void {
+    const data = {
+      name: this.addF.get('name')?.value,
+      image: this.addF.get('image')?.value,
+      price: this.addF.get('price')?.value,
+      description: this.addF.get('description')?.value,
+      quantity: this.addF.get('quantity')?.value,
+      brand: this.addF.get('brand')?.value,
+      status: this.addF.get('status')?.value,
+      gender: this.addF.get('gender')?.value,
+      detail: (this.addF.get('detail')?.value).split(','),
+      history: this.addF.get('history')?.value,
+      color: this.addF.get('color')?.value,
+      size: (this.addF.get('size')?.value).split(','),
+    }
     if (this.addF.valid) {
-      this.crud.add(this.addF.value).subscribe(res => {
+      // this.crud.add(this.addF.value).subscribe(res => {
+      //   Swal.fire({
+      //     icon: 'success',
+      //     title: 'Successfully',
+      //     showConfirmButton: false,
+      //     timer: 1500
+      //   })
+      //   this.router.navigate(['/admin'])
+      // })
+      this.crud.add(data).subscribe(res => {
         Swal.fire({
           icon: 'success',
           title: 'Successfully',
@@ -39,7 +62,6 @@ export class ProductAddComponent {
           timer: 1500
         })
         this.router.navigate(['/admin'])
-        // console.log(this.addF.value);
       })
     }
   }

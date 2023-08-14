@@ -457,7 +457,9 @@
       "brand": "converse",
       "status": "Out of stock",
       "gender": "male",
-      "detail": "full details",
+      "detail": [
+        "full details"
+      ],
       "history": "his",
       "color": "Yellow",
       "size": [
@@ -474,13 +476,64 @@
       "brand": "converse",
       "status": "In stock",
       "gender": "male",
-      "detail": "full canvas",
+      "detail": [
+        "full canvas"
+      ],
       "history": "ác",
       "color": "Red",
       "size": [
         40
       ],
       "id": 18
+    },
+    {
+      "name": "Chuck Taylor Wolf Grey",
+      "image": "assets/images/shoe2.jpg",
+      "price": 123456,
+      "description": "as",
+      "quantity": "1",
+      "brand": "khiem",
+      "status": "In stock",
+      "gender": "male",
+      "history": "sa",
+      "color": "Red",
+      "detail": [
+        "Durable premium canvas and/or denim",
+        " Lightly padded footbed for all-day comfort",
+        " Your choice of trending colors and prints 456 wolf grey",
+        " super human"
+      ],
+      "size": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "id": 19
+    },
+    {
+      "name": "wolf grey 20s",
+      "image": "assets/images/shoe5.jpg",
+      "price": 2000,
+      "description": "This sneaker runs large. Order a half size down.",
+      "quantity": "1",
+      "brand": "bitit",
+      "status": "In stock",
+      "gender": "male",
+      "detail": [
+        "High-top shoe with premium canvas upper in seasonal color",
+        " Winged tongue titching helps lock it in place",
+        " Vintage star ankle patch and license plate\nArchive-inspired",
+        " glossy egret midsole\nOrtholite insole cushioning"
+      ],
+      "history": "By 1970, the Chuck Taylor All Star evolved into one of the best basketball sneakers, ever. The Chuck 70 celebrates that heritage by bringing together archival-inspired details with modern comfort updates. Ortholite insole cushioning and winged tongue stitching takes the comfort level up a notch. A glossy, egret midsole and signature star ankle patch brings out the shoe's iconic, vintage style. Updated in archival color on premium canvas.",
+      "color": "Yellow",
+      "size": [
+        "37",
+        "38",
+        "39"
+      ],
+      "id": 20
     }
   ]
 }

@@ -43,18 +43,32 @@ export class ProductEditComponent {
         brand: new FormControl(pro.brand, Validators.required),
         status: new FormControl(pro.status, Validators.required),
         gender: new FormControl(pro.gender, Validators.required),
-        detail: new FormControl(pro.detail, Validators.required),
+        detail: new FormControl((pro.detail), Validators.required),
         history: new FormControl(pro.history, Validators.required),
         color: new FormControl(pro.color, Validators.required),
-        size: new FormControl(pro.size, Validators.required),
+        size: new FormControl((pro.size), Validators.required),
       })
     })
   }
   editSubmit(): void {
+    const data = {
+      name: this.editF.get('name')?.value,
+      image: this.editF.get('image')?.value,
+      price: this.editF.get('price')?.value,
+      description: this.editF.get('description')?.value,
+      quantity: this.editF.get('quantity')?.value,
+      brand: this.editF.get('brand')?.value,
+      status: this.editF.get('status')?.value,
+      gender: this.editF.get('gender')?.value,
+      history: this.editF.get('history')?.value,
+      color: this.editF.get('color')?.value,
+      detail: (typeof ((this.editF.get('detail')?.value)) === 'object' ? (this.editF.get('detail')?.value).concat() : (this.editF.get('detail')?.value).split(',')),
+      size: (typeof ((this.editF.get('size')?.value)) === 'object' ? (this.editF.get('size')?.value).concat() : (this.editF.get('size')?.value).split(',')),
+    }
     if (this.editF.valid) {
       const routeParams = parseInt(this.route.snapshot.params['id'], 10);
 
-      this.crud.update(routeParams, this.editF.value).subscribe(res => {
+      this.crud.update(routeParams, data).subscribe(res => {
         Swal.fire({
           icon: 'success',
           title: 'Successfully',
@@ -62,8 +76,6 @@ export class ProductEditComponent {
           timer: 1500
         })
         this.router.navigate(['/admin'])
-        // console.log(this.editF.value)
-        // console.log(res)
       })
     }
   }

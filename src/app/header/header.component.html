@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="link product-men">
-      <a>Men</a>
+      <a (click)="shoeMen()">Men</a>
       <div class="product-list-men">
         <div class="icon-angle">
           <fa-icon [icon]="faAngleRight"></fa-icon>
@@ -64,7 +64,9 @@
       </div>
     </div>
     <div class="link product-women">
-      <a>Women</a>
+      <a [routerLink]="['/product']" [queryParams]="{ category: 'womenShoe' }"
+        >Women</a
+      >
       <div class="product-list-women">
         <div class="icon-angle-women">
           <fa-icon [icon]="faAngleRight"></fa-icon>

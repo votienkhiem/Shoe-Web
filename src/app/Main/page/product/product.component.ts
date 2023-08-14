@@ -7,6 +7,7 @@ import { DataService } from 'src/app/service/data.service';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -29,6 +30,8 @@ export class ProductComponent {
   public isPriceFilteredTenToFif = false;
   public isPriceFilteredFifToThirty = false;
   public isPriceFilteredOverThirty = false;
+  public cate: any;
+
 
 
 
@@ -39,11 +42,19 @@ export class ProductComponent {
   constructor(
     private shoeService: ShoeingService,
     private cart: CartService,
-    private data: DataService
+    private data: DataService,
+    private activeRoute: ActivatedRoute
   ) {
     this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
-      this.shoes = arrShoes
+      this.shoes = arrShoes;
     });
+    this.activeRoute.queryParams.subscribe((res: any) => {
+      this.cate = res.category
+    });
+
+  }
+  ngOnInit(): void {
+    this.shopMenAndWomen();
   }
 
   filterFiveToTen(): void {
@@ -104,6 +115,28 @@ export class ProductComponent {
   filterShoeSneaker(): void {
     let filterMale = this.shoes.filter(res => res.name === "Sneaker");
     this.shoes = filterMale;
+  }
+  shopMenAndWomen(): void {
+    // this.activeRoute.queryParams.subscribe((res: any) => {
+    //   if (this.cate) {
+    //     this.titleFilter = "Men's Shoes";
+    //     this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+    //       this.shoes = arrShoes.filter(res => res.gender === "male");
+    //     });
+    //   }
+    // })
+    if (this.cate === 'womenShoe') {
+      this.titleFilter = "Women's shoes";
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes.filter(res => res.gender === "female");
+      });
+    }
+    if (this.cate === 'menShoe') {
+      this.titleFilter = "Men's Shoes";
+      this.shoeService.getAllShoes().then((arrShoes: Shoe[]) => {
+        this.shoes = arrShoes.filter(res => res.gender === "male");
+      });
+    }
   }
   // addToCart(shoe: Shoe, selS: any): void {
   //   // window.alert("Your product has been added to the cart!")

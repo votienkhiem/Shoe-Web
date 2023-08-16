@@ -11,6 +11,7 @@
             id=""
             placeholder="Search product"
             #search
+            (keyup.enter)="searchItems(search.value)"
           />
           <button
             type="button"
@@ -39,7 +40,13 @@
               <th scope="col">ACTION</th>
             </tr>
           </thead>
-          <tbody *ngFor="let item of shoes; index as i">
+          <tbody
+            *ngFor="
+              let item of shoes
+                | paginate : { itemsPerPage: 10, currentPage: pageNumber };
+              index as i
+            "
+          >
             <tr>
               <td>{{ item.id }}</td>
               <td>
@@ -71,6 +78,9 @@
             </tr>
           </tbody>
         </table>
+        <pagination-controls
+          (pageChange)="pageNumber = $event"
+        ></pagination-controls>
       </div>
     </div>
   </div>

@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
 export class AdminComponent {
   shoes: Shoe[] = [];
   listItems: Array<any> = [];
+  public pageNumber: number = 1;
 
 
   constructor(
@@ -32,7 +33,13 @@ export class AdminComponent {
     if (!text) {
       this.shoes = this.listItems
     }
+    if (text == '') {
+      this.crud.getList().subscribe(res => {
+        this.shoes = res;
+      })
+    }
     this.shoes = this.shoes.filter(data => data.name.toLowerCase().includes(text.toLowerCase()));
+
   }
   deleteItem(id: number) {
     // if (confirm('Are you sure ?')) {

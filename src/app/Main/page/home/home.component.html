@@ -1,6 +1,9 @@
 <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
 
 <div class="home">
+  <button class="scroll-to-top" (click)="scrollToTop()" *ngIf="isA">
+    <fa-icon [icon]="faChevronUp"></fa-icon>
+  </button>
   <div class="home-banner">
     <img src="assets/images/sale-Banner.jpg" alt="" />
     <span>Sale: Up to 50% off Select Style*</span>

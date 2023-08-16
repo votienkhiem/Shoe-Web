@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Shoe } from 'src/shoe';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import { faBoxes } from '@fortawesome/free-solid-svg-icons';
 import { faArrowsSpin } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -14,11 +15,15 @@ import { faArrowsSpin } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  isA = false;
+  isB = false;
   faArrowRight = faArrowRight;
   faArrowLeft = faArrowLeft;
   faTruckFast = faTruckFast;
   faArrowsSpin = faArrowsSpin;
   faBoxes = faBoxes;
+  scrollY: number = 0;
+  faChevronUp = faChevronUp;
   images = [
     {
       imgSrc: 'assets/images/img1.jpg',
@@ -41,4 +46,16 @@ export class HomeComponent {
       imgAlt: 'picture4'
     },
   ]
+
+  @HostListener('window:scroll', ['$event'])
+  scrollDoCheck() {
+    if (window.scrollY > 500) {
+      this.isA = true;
+    } else {
+      this.isA = false;
+    }
+  }
+  scrollToTop(): void {
+    document.body.scrollIntoView({ behavior: 'smooth' })
+  }
 }

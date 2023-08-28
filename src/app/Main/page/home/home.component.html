@@ -24,7 +24,8 @@
     <div class="promotion">
       <!-- men -->
       <span
-        ><fa-icon [icon]="faArrowRight"></fa-icon><a href="">Shop Men</a></span
+        ><fa-icon [icon]="faArrowRight"></fa-icon
+        ><a (click)="shoeMen()">Shop Men</a></span
       >
       <div class="pro-men">
         <ul class="men">
@@ -40,7 +41,8 @@
       </div>
       <!-- women -->
       <span class="text-women"
-        ><a href="">Shop Women</a><fa-icon [icon]="faArrowLeft"></fa-icon
+        ><a (click)="womenShoe()">Shop Women</a
+        ><fa-icon [icon]="faArrowLeft"></fa-icon
       ></span>
       <div class="pro-women">
         <ul class="women">

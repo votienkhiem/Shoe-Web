@@ -6,6 +6,7 @@ import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import { faBoxes } from '@fortawesome/free-solid-svg-icons';
 import { faArrowsSpin } from '@fortawesome/free-solid-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 
 
@@ -46,6 +47,7 @@ export class HomeComponent {
       imgAlt: 'picture4'
     },
   ]
+  constructor(private router: Router) { }
 
   @HostListener('window:scroll', ['$event'])
   scrollDoCheck() {
@@ -55,7 +57,15 @@ export class HomeComponent {
       this.isA = false;
     }
   }
+
   scrollToTop(): void {
     document.body.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  shoeMen(): void {
+    this.router.navigate(['/product'], { queryParams: { category: 'menShoe' } })
+  }
+  womenShoe(): void {
+    this.router.navigate(['/product'], { queryParams: { category: 'womenShoe' } })
   }
 }

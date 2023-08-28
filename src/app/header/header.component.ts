@@ -40,7 +40,7 @@ export class HeaderComponent {
   shoeMen(): void {
     this.router.navigate(['/product'], { queryParams: { category: 'menShoe' } })
   }
-  // shoeWomen(): void {
-  //   this.router.navigate(['/product'], { queryParams: { category: 'womenShoe' } })
-  // }
+  shoeWomen(): void {
+    this.router.navigate(['/product'], { queryParams: { category: 'womenShoe' } })
+  }
 }

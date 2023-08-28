@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PreloadAllModules } from '@angular/router';
 import { PageNotFoundComponent } from './Main/page/page-not-found/page-not-found.component';
 import { managerGuard } from './shared/guards/manager.guard';
+import { ContactComponent } from './Main/page/contact/contact.component';
 
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   },
   { path: 'login', loadChildren: () => import('./Main/page/login/login.module').then(m => m.LoginModule) },
   { path: 'payment', loadChildren: () => import('./Main/page/payment/payment.module').then(m => m.PaymentModule) },
+  { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
